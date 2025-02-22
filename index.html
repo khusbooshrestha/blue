@@ -1,34 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header Design</title>
-    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>Blue Ocean Overseas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <link rel="stylesheet" href="./assets/scss/main.css">
 </head>
+
 <body>
-    <header>
-        <div class="logo">
-            <h1>BUS DEAN OVERSEAS PYT.TTD.</h1>
-            <p>Lic.No:</p>
+    <header class="header">
+        <div class="header-top__wrap d-flex align-items-center">
+            <div class="logo">
+                <img src="./assets/images/logo.png" alt="logo">
+            </div>
+            <div class="license-wrap">
+                <span>
+                    Lic.No:
+                </span>
+                864/066/067
+            </div>
+            <div class="header-button__wrap">
+                <a href="#" class="btn btn-secondary">upload</a>
+                <a href="#" class="btn btn-secondary">direct connect to whatsapp</a>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Jobs Seekers</a></li>
-                <li><a href="#">Talent Seekers</a></li>
-                <li><a href="#">Talent Acquisition</a></li>
-                <li><a href="#">Clients</a></li>
-                <li><a href="#">Policies</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </nav>
-        <div class="actions">
-            <button class="upload-resume">Upload Resume</button>
-            <button class="whatsapp-connect">Direct Connect to WhatsApp</button>
+        <div class="header-navigation">
+            <nav class="main-navigation">
+                <ul class="menu">
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Jobs Seekers</a></li>
+                    <li><a href="#">Talent Seekers</a></li>
+                    <li><a href="#">Talent Acquisition</a></li>
+                    <li><a href="#">Clients</a></li>
+                    <li><a href="#">Policies</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
+    <div class="hero-banner">
+        <div class="bg-image">
+            <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                <source srcset="assets/images/hero-banner.png" media="(max-width: 767px)" />
+                <source srcset="assets/images/hero-banner.png" />
+                <!--[if IE 9]></video><![endif]-->
+                <img src="assets/images/hero-banner.png" alt="Hero Banner Desk" title="Hero Banner Desk" />
+            </picture>
+        </div>
+        <div class="banner-content">
+            <div class="container">
+                <div class="banner-text text-center">
+                    <h1 class="banner-title">
+                        Connecting Nepalese Talent with Global Opportunities
+                    </h1>
+                    <span class="sub-heading">
+                        Reliable, Ethical, and Professional Recruitment Services Since 2010
+                    </span>
+                    <div class="btn-wrap d-flex align-items-center justify-center">
+                        <a href="#" target="" class="btn btn-round" tabindex="0">
+                            Explore Job Opportunities
+                        </a>
+                        <a href="#" target="_blank" class="btn btn-round" tabindex="0">
+                            Request Recruitment Services
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about-section section-padding">
+        <h2 class="section-title">
+            About us
+        </h2>
+        <div class="about-section__content">
+            Blue Ocean Overseas Pvt. Ltd.”BO2”, established in 2010 under license number 864/066/067 with ISO certified
+            (ISO 9001 : 2015), stands as a premier and highly recommended manpower agency in Nepal. Entrusted with
+            providing reliable, effective, and trusted recruitment services, B20 has been supplying diverse categories
+            of human resources across Malaysia, Saudi Arabia, UAE, Qatar, Kuwait, Bahrain, Oman, Mauritius, Japan,
+            European countries, and other locations authorized by the Government of Nepal. With a decade of expertise,
+            our commitment to quality and professional service delivery has allowed us to satisfy customers and clients
+            worldwide, earning a reputation for excellence in the field of international recruitment.
+        </div>
+        <div class="btn-wrap">
+            <a href="#" class="btn">Learn more</a>
+        </div>
+    </div>
+    <div class="service-section">
+        <div class="section-title text-center">
+            Key Services
+        </div>
+        <div class="service-wrap d-md-flex">
+            <div class="service-item">
+                <div class="service-icon">
+                    <img src="./assets/images/service-icon1.png" alt="">
+                </div>
+                <h3 class="service-title">
+                    International Recruitment
+                </h3>
+                <div class="service-content">
+                    <p>
+                        we enjoy seeing every bit of your hardwork exhibited onto the screen.
+                    </p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">
+                    <img src="./assets/images/service-icon2.png" alt="">
+                </div>
+                <h3 class="service-title">
+                    Ethical Recruitment
+                </h3>
+                <div class="service-content">
+                    <p>
+                        we enjoy seeing every bit of your hardwork exhibited onto the screen.
+                    </p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">
+                    <img src="./assets/images/service-icon3.png" alt="">
+                </div>
+                <h3 class="service-title">
+                    Specialized Industry Recruitment
+                </h3>
+                <div class="service-content">
+                    <p>
+                        we enjoy seeing every bit of your hardwork exhibited onto the screen.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="feature-section">
+        <div class="section-title text-center">
+            Key Services
+        </div>
+        <div class="feature-wrap d-md-flex">
+            <div class="feature-item">
+                <h4 class="feature-title">Trust</h4>
+                <div class="feature-text">
+                    Built on a foundation of integrity, we have earned the trust of both employers and candidates
+                </div>
+            </div>
+            <div class="feature-item">
+                <h4 class="feature-title">Ethics</h4>
+                <div class="feature-text">
+                    Committed to ethical recruitment practices, ensuring no exploitation of candidates.
+                </div>
+            </div>
+            <div class="feature-item">
+                <h4 class="feature-title">Responsibility</h4>
+                <div class="feature-text">
+                    We take full responsibility for every placement, ensuring compliance and satisfaction.
+                </div>
+            </div>
+            <div class="feature-item">
+                <h4 class="feature-title">Global Reach</h4>
+                <div class="feature-text">
+                    Partnering with top companies across Asia, Europe and the Middle East.
+                </div>
+            </div>
+            <div class="feature-item">
+                <h4 class="feature-title">Compliance</h4>
+                <div class="feature-text">
+                    Certified under ISO 9001:2015 for quality management and service excellence.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-layout">
+        <div class="content-layout__wrap d-md-flex">
+            <div class="content-layout__info">
+                <h3 class="content-layout__title">
+                    Job seekers
+                </h3>
+                <div class="text">
+                    <p>
+                        At Blue Ocean Overseas Pvt. Ltd. (BO2), we are committed to guiding job seekers towards
+                        rewarding career opportunities across various industries and international markets. Whether
+                        you're starting your career or looking for new challenges, we are here to support you at every
+                        step.
+                    </p>
+                </div>
+                <a href="#" class="btn">find job...</a>
+            </div>
+            <div class="content-layout__img">
+                <img src="./assets/images/banner1.png" alt="">
+            </div>
+        </div>
+        <div class="content-layout__wrap d-md-flex flex-row-reverse">
+            <div class="content-layout__info">
+                <h3 class="content-layout__title">
+                    Job seekers
+                </h3>
+                <div class="text">
+                    <p>
+                        At Blue Ocean Overseas Pvt. Ltd. (BO2), we are committed to guiding job seekers towards
+                        rewarding career opportunities across various industries and international markets. Whether
+                        you're starting your career or looking for new challenges, we are here to support you at every
+                        step.
+                    </p>
+                </div>
+                <a href="#" class="btn">find job...</a>
+            </div>
+            <div class="content-layout__img">
+                <img src="./assets/images/banner2.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="stats-section">
+        <div class="stat-box">
+            <h2 class="count" data-target="150">0</h2>
+            <p>Clients Worldwide</p>
+        </div>
+        <div class="stat-box">
+            <h2 class="count" data-target="15">0</h2>
+            <p>Glorious Year</p>
+        </div>
+        <div class="stat-box">
+            <h2 class="count" data-target="15000">0</h2>
+            <p>HR Deployment</p>
+        </div>
+        <div class="stat-box">
+            <h2 class="count" data-target="10">0</h2>
+            <p>Countries We Serve</p>
+        </div>
+    </div>
+    <div class="logo-layout">
+        <h2 class="section-title">
+            trusted by
+        </h2>
+        <div class="logo-layout__wrap d-md-flex">
+            <div class="logo-item">
+                <img src="./assets/images/logo-item1.png" alt="">
+            </div>
+            <div class="logo-item">
+                <img src="./assets/images/logo-item2.png" alt="">
+            </div>
+            <div class="logo-item">
+                <img src="./assets/images/logo-item3.png" alt="">
+            </div>
+            <div class="logo-item">
+                <img src="./assets/images/logo-item4.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="certified-text text-center">
+        ISO 9001:2015 CERTIFIED & RBA REGISTERD
+    </div>
+    <section class="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <span class="quote">“</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac vestibulum lectus.</p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <span class="quote">“</span>
+                    <p>Quisque maximus, odio efficitur posuere ultrices, felis odio euismod nisi.</p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <span class="quote">“</span>
+                    <p>At sollicitudin ipsum. Duis at risus et est tincidunt bibendum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <img src="./assets/images/logo-white.png" alt="<?php bloginfo('name'); ?>">
+                    
+                </div>
+                <div class="footer-bottom__img">
+                    <img src="./assets/images/footer-img1.png" alt="">
+                    <img src="./assets/images/footer-img1.png" alt="">
+
+                </div>
+                <p>Tokha 10, Samakhusi, Kathmandu, Nepal</p>
+                <p>+977 01-4951732, 4956826</p>
+                <p><a href="mailto:info@blueocean.com.np">info@blueocean.com.np</a></p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+    
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Job Seekers</a></li>
+                    <li><a href="#">Talent Seekers</a></li>
+                    <li><a href="#">Talent Acquisition</a></li>
+                    <li><a href="#">Clients</a></li>
+                    <li><a href="#">Policies</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-links">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="#">Department of Foreign Employment</a></li>
+                    <li><a href="#">Ministry of Labour and Employment</a></li>
+                    <li><a href="#">Foreign Employment Promotion Board</a></li>
+                    <li><a href="#">Embassy of Nepal Malaysia</a></li>
+                    <li><a href="#">Embassy of Nepal UAE</a></li>
+                    <li><a href="#">Embassy of Nepal Qatar</a></li>
+                    <li><a href="#">Embassy of Nepal Saudi Arabia</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>Copyright &copy; <?php echo date("Y"); ?> All rights reserved. Blue Ocean Overseas Pvt. Ltd.</p>
+            <p>Powered by <a href="#">Sage Graphics</a></p>
+        </div>
+    </footer>
+    
+    </body>
+    </html>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Include Select2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>

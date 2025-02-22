@@ -8,11 +8,13 @@
 @import 'base/functions';
 @import 'base/mixins';
 @import 'base/helpers';
+@import 'base/variables';
 
 @import 'layout/general';
 @import 'layout/header';
 
 @import 'component/product-item';
+@import 'component/button';
 
 @import 'pages/home';
 @import 'pages/single-article';
