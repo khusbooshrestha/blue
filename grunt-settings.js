@@ -1,8 +1,8 @@
 module.exports = {
     sassDir:          'assets/scss/',
     sassMainFileName: 'main',
-    cssDir:           'assets/css/',
-    cssMainFileDir:   'assets/css/',
+    cssDir:           'assets/scss/',
+    cssMainFileDir:   'assets/scss/',
     cssMainFileName:  'main',
     jsDir:            'js/',
     imgDir:           'assets/images__/',

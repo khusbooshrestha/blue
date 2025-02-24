@@ -116,7 +116,6 @@ sftp-config.json
 .DS_Store
 Design\ Input
 package-lock.json
-images
 storefront
 index.php
 .htaccess

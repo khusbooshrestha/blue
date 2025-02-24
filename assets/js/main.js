@@ -1,4 +1,25 @@
 (function ($) {
+    $(document).ready(function(){
+        console.log("working");
+        $('.testimonial-slider').slick({
+            centerMode: true,
+            centerPadding: '60px',
+            slidesToShow: 3,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            dots: true,
+            arrows: false,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        centerPadding: '20px'
+                    }
+                }
+            ]
+        });
+    });
       document.addEventListener("DOMContentLoaded", function () {
         const counters = document.querySelectorAll(".count");
         let isAnimated = false; // Prevent multiple triggers
@@ -29,27 +50,5 @@
     
         observer.observe(document.querySelector(".stats-section"));
     });
-
-
-    $(document).ready(function(){
-      jQuery('.testimonial-slider').slick({
-          centerMode: true,
-          centerPadding: '60px',
-          slidesToShow: 3,
-          autoplay: true,
-          autoplaySpeed: 3000,
-          dots: true,
-          arrows: false,
-          responsive: [
-              {
-                  breakpoint: 768,
-                  settings: {
-                      slidesToShow: 1,
-                      centerPadding: '20px'
-                  }
-              }
-          ]
-      });
-  });
   
 })(jQuery);
