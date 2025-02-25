@@ -120,8 +120,8 @@ input.btn {
             }
 
             &:hover {
-                background: ($theme-secondary-color,0.9);
-                border-color: ($theme-secondary-color,0.9);
+                background: rgba($theme-secondary-color,0.9);
+                border-color: rgba($theme-secondary-color,0.9);
                 color: $white;;
             }
         }

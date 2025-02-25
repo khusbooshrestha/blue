@@ -1,6 +1,24 @@
 (function ($) {
     $(document).ready(function(){
-        console.log("working");
+        jQuery('html').on('click', '.nav_control', function(event) {
+            event.preventDefault();
+            jQuery('body').toggleClass('nav-active');
+    
+            if(jQuery('body').hasClass('nav-active')) {
+                lockBody();
+            } else {
+                unlockBody();
+            }
+        });
+        jQuery('html').on('click touchstart pointerdown MSPointerDown', function(event) {
+            if(!target.closest('.nav_control').length && !target.closest('.main-navigation').length) {
+                if(document.body.classList.contains('body-locked') && document.body.classList.contains('nav-active')) {
+                    unlockBody();
+                }
+                jQuery('body').removeClass('nav-active');
+            }
+        });
+
         $('.testimonial-slider').slick({
             centerMode: true,
             centerPadding: '60px',
