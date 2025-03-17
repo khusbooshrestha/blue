@@ -1,32 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blue Ocean Overseas</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    
+        <link rel="stylesheet" href="./assets/scss/main.css">
+    </head>
 <body>
     <header class="header">
-        <div class="container">
-            <div class="header-top">
-                <div class="logo">
-                    <img src="logo.png" alt="Company Logo">
-                </div>
-                <nav class="nav">
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Clients</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </nav>
-                <div class="header-buttons">
-                    <button>Join Now</button>
-                    <button>Contact Us</button>
-                </div>
+        <div class="header-top__wrap d-flex align-items-center">
+            <div class="logo">
+                <img src="./assets/images/logo.png" alt="logo">
             </div>
+            <div class="license-wrap">
+                <span>
+                    Lic.No:
+                </span>
+                864/066/067
+            </div>
+            <div class="header-button__wrap">
+                <a href="#" class="btn btn-secondary">upload</a>
+                <a href="#" class="btn btn-secondary">direct connect to whatsapp</a>
+            </div>
+        </div>
+        <div class="header-navigation">
+            <button type="button" class="nav-opener nav_control">
+                <span class="nav-bar">
+                menu                
+            </span>
+        </button>
+            <nav class="main-navigation">
+                
+                <ul class="menu">
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Jobs Seekers</a></li>
+                    <li><a href="#">Talent Seekers</a></li>
+                    <li><a href="#">Talent Acquisition</a></li>
+                    <li><a href="#">Clients</a></li>
+                    <li><a href="#">Policies</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -185,20 +211,71 @@
     </section>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-top">
+        <div class="footer-container">
+            <div class="footer-left">
                 <div class="footer-logo">
-                    <img src="footer-logo.png" alt="Footer Logo">
+                    <img src="./assets/images/logo-white.png" alt="<?php bloginfo('name'); ?>">
+                    
                 </div>
-                <div class="footer-links">
-                    <ul>
-                        <li><a href="#">Quick Links</a></li>
-                        <li><a href="#">Useful Links</a></li>
-                    </ul>
+                <div class="footer-bottom__img">
+                    <img src="./assets/images/footer-img1.png" alt="">
+                    <img src="./assets/images/footer-img2.png" alt="">
+
+                </div>
+                <p>Tokha 10, Samakhusi, Kathmandu, Nepal</p>
+                <p>+977 01-4951732, 4956826</p>
+                <p><a href="mailto:info@blueocean.com.np">info@blueocean.com.np</a></p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
-            <p>&copy; 2024 Company Name. All Rights Reserved.</p>
+    
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Job Seekers</a></li>
+                    <li><a href="#">Talent Seekers</a></li>
+                    <li><a href="#">Talent Acquisition</a></li>
+                    <li><a href="#">Clients</a></li>
+                    <li><a href="#">Policies</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-links">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="#">Department of Foreign Employment</a></li>
+                    <li><a href="#">Ministry of Labour and Employment</a></li>
+                    <li><a href="#">Foreign Employment Promotion Board</a></li>
+                    <li><a href="#">Embassy of Nepal Malaysia</a></li>
+                    <li><a href="#">Embassy of Nepal UAE</a></li>
+                    <li><a href="#">Embassy of Nepal Qatar</a></li>
+                    <li><a href="#">Embassy of Nepal Saudi Arabia</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>Copyright &copy; <?php echo date("Y"); ?> All rights reserved. Blue Ocean Overseas Pvt. Ltd.</p>
+            <p>Powered by <a href="#">Sage Graphics</a></p>
         </div>
     </footer>
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="./assets/js/main.js"></script>
+
 </body>
+
 </html>
