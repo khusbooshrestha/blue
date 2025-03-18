@@ -277,24 +277,27 @@
 }
 
 
+.legal {
+    .legal-docs {
+        background: $theme-primary-color;
+        padding:20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+}
+
 .commitments {
     padding: 50px 0;
     text-align: center;
 
-    h2 {
-        font-size: 28px;
-        margin-bottom: 20px;
-    }
 
     .commitments-wrapper {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        text-align: left;
-
-        .commitment-text {
-            width: 48%;
-            padding: 15px;
+        gap: 20px;
+        .commitment-item {
+            width: calc(50px - 20px);
+            padding: 30px;
             font-size: 16px;
             line-height: 1.6;
         }
@@ -303,13 +306,26 @@
             font-family: 'Kalimati', sans-serif; // Use a suitable Nepali font
         }
     }
+}
 
-    @media (max-width: 768px) {
-        .commitments-wrapper {
-            flex-direction: column;
-            .commitment-text {
-                width: 100%;
-            }
-        }
-    }
+
+.conduct-section {
+    background: rgba($theme-secondary-color,0.13);
+    padding: rem-calc(40px 20px);
+
+  @include media-breakpoint-up(md) {
+    padding: 30px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 40px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: 60px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding: 60px 120px;
+  }
 }
