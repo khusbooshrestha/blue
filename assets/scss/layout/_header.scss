@@ -15,9 +15,16 @@
     .license-wrap {
         max-width: 30%;
         flex: 0 0 30%;
+        color: $theme-secondary-color;
+        text-align: center;
+
+        span {
+          display: block;
+        }
     }
     .header-button__wrap {
         display: flex;
+        justify-content: flex-end;
         max-width: 40%;
         flex: 0 0 40%;
         gap: 20px;
@@ -116,12 +123,11 @@
         display: flex;
         justify-content: center;
         z-index: 1;
-        width: 100%;
         position: relative;
         @include media-breakpoint-up(lg) {
-          margin-bottom: -20px;
-          border-radius: 20px;
-          padding: 10px;
+          margin-bottom: -44px;
+          border-radius: 50px;
+          padding: 21px 10px;
         }
         @include media-breakpoint-down(md) {
           position: fixed;
