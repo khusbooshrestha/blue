@@ -20,22 +20,18 @@
         });
 
         $('.testimonial-slider').slick({
-            centerMode: true,
-            centerPadding: '60px',
             slidesToShow: 3,
-            autoplay: true,
-            autoplaySpeed: 3000,
-            dots: true,
-            arrows: false,
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 1,
-                        centerPadding: '20px'
-                    }
-                }
-            ]
+            slidesToScroll: 1,
+            arrows: true,
+            dots: false,
+            centerMode: true,
+            variableWidth: true,
+            infinite: true,
+            focusOnSelect: true,
+            cssEase: 'linear',
+            touchMove: true,
+            prevArrow:'<button class="slick-prev"> < </button>',
+            nextArrow:'<button class="slick-next"> > </button>',
         });
     });
       document.addEventListener("DOMContentLoaded", function () {

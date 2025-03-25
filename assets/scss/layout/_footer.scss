@@ -15,9 +15,11 @@
             flex: 1;
             min-width: 250px;
             text-align: left;
-
+            @include media-breakpoint-up(md) {
+                margin-bottom: 40px;
+            }
             img {
-                max-width: 180px;
+                max-width: 357px;
             }
 
             p {
@@ -25,7 +27,13 @@
                 margin-top: 10px;
             }
         }
-
+        .footer-bottom__img {
+            display: flex;
+            @include media-breakpoint-up(md) {
+                gap: 15px;
+                margin-bottom: 40px;
+            }
+        }
         .footer-contact {
             flex: 1;
             min-width: 250px;
@@ -52,12 +60,15 @@
         }
 
         .footer-links {
-            flex: 1;
-            min-width: 200px;
 
             h3 {
+                font-weight: 700;
                 font-size: 16px;
                 margin-bottom: 10px;
+                @include media-breakpoint-up(md) {
+                    font-size: 24px;
+                    margin-bottom: 30px;
+                }
             }
 
             ul, .footer-menu {
@@ -86,7 +97,6 @@
         text-align: center;
         padding-top: 20px;
         font-size: 14px;
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
 
         a {
             color: #f8c200;
