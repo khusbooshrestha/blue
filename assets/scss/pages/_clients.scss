@@ -1,0 +1,28 @@
+.logo-wrap {
+    @include media-breakpoint-up(md) {
+        gap: 30px;
+    }
+
+    @include media-breakpoint-up(lg) {
+    gap: 40px;
+    }
+
+    @include media-breakpoint-up(xl) {
+    gap: 60px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+    gap: 100px;
+    }
+}
+
+.logo-item {
+    border: 2px solid $theme-secondary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include media-breakpoint-up(lg) {
+        flex: 0 0 calc(25% - 50px);
+        max-width: calc(25% - 50px);
+    }
+}
