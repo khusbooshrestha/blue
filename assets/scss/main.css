@@ -1197,11 +1197,6 @@ input.btn.has_width {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 20px;
-}.company .section-title {
-	font-size: 28px;
-	font-weight: bold;
-	text-align: center;
-	margin-bottom: 30px;
 }.company .company-content {
 	display: -webkit-box;
 	display: -ms-flexbox;
