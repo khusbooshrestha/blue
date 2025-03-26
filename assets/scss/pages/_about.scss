@@ -72,7 +72,6 @@
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 20px;
-        text-align: center;
     }
 
     .section-title {
@@ -92,10 +91,12 @@
             transition: transform 0.3s ease-in-out;
 
             .icon {
-                margin-bottom: 15px;
-
+                margin-bottom: rem-calc(15px);
+                @include media-breakpoint-up(md) {
+                    margin-bottom: 20px;
+                }
                 img {
-                    width: 50px;
+                    width: 40px;
                     height: auto;
                 }
             }
@@ -120,6 +121,11 @@
                 color: $theme-primary-color;
                 font-size: 16px;
                 line-height: 1.5;
+                p {
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
             }
         }
     }
@@ -226,8 +232,6 @@
 
 .vision-mission {
     padding: 60px 0;
-    background-color: #f5f5f5; // Light background for contrast
-
     .container {
         max-width: 1200px;
         margin: 0 auto;
@@ -243,23 +247,33 @@
     }
 
     .vm-item {
-        background: #fff;
         padding: 30px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         text-align: center;
         transition: transform 0.3s ease;
-
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .vm-img {
+            margin-bottom: rem-calc(10px);
+            @include media-breakpoint-up(md) {
+                margin-bottom: 20px;
+            }
+        }
         h3 {
-            font-size: 22px;
+            font-size: 48px;
             font-weight: bold;
             margin-bottom: 15px;
+            color: $theme-primary-color;
         }
 
         p {
-            font-size: 16px;
+            font-size: 20px;
             line-height: 1.6;
-            color: #555;
+            color: $theme-primary-color;
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
 
         &:hover {
@@ -293,16 +307,47 @@
     }
 }
 
+.awards {
+    .awards-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .awards-img {
+        margin-bottom: rem-calc(20px);
+        @include media-breakpoint-up(md) {
+            margin-bottom: 30px;
+        }
+        img {
+            object-fit: contain;
+            margin-inline: auto;
+        }
+    }
+}
+
 .commitments {
     padding: 50px 0;
     text-align: center;
-
-
+    
     .commitments-wrapper {
+        position: relative;
+        background: $theme-primary-color;
         gap: 20px;
+        color: $white;
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 100%;
+            background: $white;
+        }
 
         .commitment-item {
-            width: calc(50px - 20px);
+            width: calc(50% - 20px);
             padding: 30px;
             font-size: 16px;
             line-height: 1.6;

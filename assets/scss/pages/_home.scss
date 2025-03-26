@@ -5,7 +5,11 @@
 .feature-section,
 .testimonials,
 .content-layout__wrap,
-.newsletter-form {
+.newsletter-form,
+.service-feature-section,
+.service-banner-layout,
+.ethics,
+.legal {
   margin-bottom: rem-calc(40px);
   @include media-breakpoint-up(md) {
     margin-bottom: 30px;

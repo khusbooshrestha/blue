@@ -37,6 +37,26 @@
 
 .service-banner-layout {
     color: $white;
+    position: relative;
+    .bg-image {
+      position: relative;
+  
+      img {
+        width: 100%;
+      }
+    }
+    .service-content {
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 5;
+      top: 50%;
+      transform: translate(0, -50%);
+      margin-inline: auto;
+      @include media-breakpoint-up(md) {
+        max-width: 940px;
+      }
+    }
     .service-banner-title {
             color: inherit;
           font-weight: 700;
@@ -100,6 +120,10 @@
       gap: 20px;
   
       .service-feature-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         text-align: center;
         background: rgba($theme-secondary-color, 0.13);
         max-width: calc(50% - 50px);
@@ -107,6 +131,7 @@
         padding: rem-calc(20px);
   
         @include media-breakpoint-up(md) {
+          min-height: 334px;
           padding: 20px;
           border-radius: 50px;
         }
