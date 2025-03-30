@@ -189,3 +189,25 @@ margin-block: 0 rem-calc(15px);
   margin-bottom: 30px;
 }
 }
+
+.section-header {
+  margin-bottom: rem-calc(20px);
+  @include media-breakpoint-up(md) {
+    margin-bottom: 30px;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 50px;
+  }
+  .section-title {
+    margin-bottom: 20px;
+  }
+  .section-subtitle {
+    font-family: "Inter", sans-serif;
+    font-size: rem-calc(18px);
+    color: $theme-gray;
+    margin-bottom: 0;
+    @include media-breakpoint-up(md) {
+      font-size: 18px;
+    }
+  }
+}

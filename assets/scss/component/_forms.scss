@@ -1,0 +1,86 @@
+.radio-group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    
+}
+
+.custom-radio {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+
+    input {
+        display: none;
+
+        /* Hide default radio button */
+        :checked+.radio-check::after {
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            width: 6px;
+            height: 6px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        &:checked+.radio-check {
+            background-color: #012A41;
+            /* Dark blue */
+            border-color: #012A41;
+        }
+    }
+
+    .radio-check {
+        width: 18px;
+        height: 18px;
+        border: 2px solid #ccc;
+        border-radius: 50%;
+        display: inline-block;
+        position: relative;
+        margin-right: 8px;
+        transition: all 0.3s ease;
+    }
+}
+
+
+
+.form-group {
+    margin-bottom: rem-calc(16px);
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 30px;
+    }
+    .form-label {
+        width: 100%;
+        display: block;
+    }
+}
+.form-radio-group {
+    .form-label {
+        display: block;
+        @include media-breakpoint-up(md) {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.form-row {
+    width: 100%;
+
+    @include media-breakpoint-up(md) {
+        display: flex;
+        margin-bottom: 30px;
+        gap: 40px;
+    }
+
+    .form-group {
+        @include media-breakpoint-up(md) {
+            flex-basis: calc(50% - 20px);
+            margin-bottom: 0;
+        }
+    }
+}

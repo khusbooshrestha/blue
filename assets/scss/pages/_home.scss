@@ -9,7 +9,8 @@
 .service-feature-section,
 .service-banner-layout,
 .ethics,
-.legal {
+.legal,
+.logo-section {
   margin-bottom: rem-calc(40px);
   @include media-breakpoint-up(md) {
     margin-bottom: 30px;
@@ -126,7 +127,25 @@
     }
   }
 }
+.padding-inline {
+  padding: rem-calc(0 20px);
 
+  @include media-breakpoint-up(md) {
+    padding: 0 30px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 0 40px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: 0 60px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding: 0 120px;
+  }
+}
 .about-section {
   padding: rem-calc(0 20px);
 
