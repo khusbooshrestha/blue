@@ -1299,6 +1299,58 @@ input.btn.has_width {
 	font-weight: 700;
 	margin-bottom: 20px;
 	font-size: 1.25rem;
+}.faq .faq-wrap {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}.faq .nav {
+	border: 1px solid #f7f7f7;
+	border-bottom: none;
+}.faq .nav li {
+	width: 100%;
+	background: #fff;
+	padding: .625rem 1.25rem .625rem;
+	border-bottom: 1px solid #f7f7f7;
+}.faq .nav li button {
+	width: 100%;
+	position: relative;
+	color: #172554;
+}.faq .nav li button:hover {
+	color: #172554;
+}.faq .nav li button:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 50px;
+	width: 24px;
+	height: 24px;
+	background-color: rgba(23, 37, 84, .31);
+	-webkit-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	transform: translateY(-100%);
+	-webkit-transition: -webkit-transform .3s ease;
+	transition: -webkit-transform .3s ease;
+	transition: transform .3s ease;
+	transition: transform .3s ease, -webkit-transform .3s ease;
+}.faq .nav li button .nav-item.show .nav-link,
+.faq .nav li button .nav-link.active {
+	color: #172554;
+	background: #fafbff;
+}.faq .nav li button .nav-item.show .nav-link:before,
+.faq .nav li button .nav-link.active:before {
+	background: #006498;
+}.faq .tab-content {
+	background: #fafbff;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+	border-radius: .625rem;
+}.accordion-item:first-of-type {
+	border: 0;
+}.accordion-item .accordion-button {
+	font-weight: 500;
+	font-size: 1rem;
+}.accordion-item .accordion-button:not(.collapsed) {
+	color: #172554;
 }.company {
 	padding: 60px 0;
 	background-color: #f9f9f9;
@@ -1910,6 +1962,24 @@ input.btn.has_width {
 	}.location-item-wrap .location-content .location-title {
 		font-size: 22px;
 		margin-bottom: 15px;
+	}.faq .nav {
+		max-width: 50%;
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 50%;
+		flex: 0 0 50%;
+	}.faq .nav li {
+		padding: 24px 50px 24px;
+	}.faq .tab-content {
+		border-radius: 15px;
+		max-width: 50%;
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 50%;
+		flex: 0 0 50%;
+		padding: 40px 40px 40px 150px;
+		margin-left: -150px;
+		z-index: -1;
+	}.accordion-item .accordion-button {
+		font-size: 16px;
 	}.values .values-grid .values-item .icon {
 		margin-bottom: 20px;
 	}.values .values-grid .values-item .values-title {

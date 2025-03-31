@@ -178,69 +178,50 @@
     <div class="faq">
         <div class="container">
             <h2 class="section-title text-center">Frequently Asked Questions</h2>
-            <div class="faq-wrap">
-                <div class="faq-accordion">
-                    <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    What is a Payment Gateway?
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>This is the first item's accordion body.</strong> It is shown by default...
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Do I need to pay to Instapay even when there is no transaction going on in my
-                                    business?
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>This is the second item's accordion body.</strong> It is hidden by
-                                    default...
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    What platforms does ACME payment gateway support?
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>This is the third item's accordion body.</strong> It is hidden by default...
-                                </div>
-                            </div>
-                        </div>
+            <div class="faq-wrap d-md-flex">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="1-tab" data-bs-toggle="tab" data-bs-target="#1" type="button" role="tab" aria-controls="1" aria-selected="true">
+                        What is a Payment Gateway?
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="2-tab" data-bs-toggle="tab" data-bs-target="#2" type="button" role="tab" aria-controls="2" aria-selected="false">
+                        Do I need to pay to Instapay even when there is no transaction going on in my business?
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="3-tab" data-bs-toggle="tab" data-bs-target="#3" type="button" role="tab" aria-controls="3" aria-selected="false">
+                        What platforms does ACME payment gateway support?
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="4-tab" data-bs-toggle="tab" data-bs-target="#4" type="button" role="tab" aria-controls="4" aria-selected="false">
+                        Does ACME provide international payments support?</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="5-tab" data-bs-toggle="tab" data-bs-target="#5" type="button" role="tab" aria-controls="5" aria-selected="false">
+                            Is there any setup fee or annual maintainance fee that I need to pay regularly?
+                        </button>
+                      </li>
+                  </ul>
+                <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="1" role="tabpanel" aria-labelledby="1-tab" tabindex="0">home1</div>
+                <div class="tab-pane" id="2" role="tabpanel" aria-labelledby="2-tab" tabindex="0">
+                    <h3 class="tab-title">Do I need to pay to Instapay even when there is no transaction going on in my business?</h3>
+                    <div class="tab-text">
+                        <p>No, you do not need to pay Instapay where there is no transaction happening. With one of the lowest transaction charge s in t he industry, pay only when you get paid!</p>
                     </div>
                 </div>
-
-                <div class="faq-card">
-                    <h3 class="faq-card-title">Do I need to pay to Instapay even when there is no transaction going on
-                        in my business?</h3>
-                    <div class="faq-card-text">
-                        <p>No, you do not need to pay Instapay when there is no transaction happening. With one of the
-                            lowest transaction charges in the industry, pay only when you get paid!</p>
-                    </div>
-                </div>
+                <div class="tab-pane" id="3" role="tabpanel" aria-labelledby="3-tab" tabindex="0">home3</div>
+                <div class="tab-pane" id="4" role="tabpanel" aria-labelledby="4-tab" tabindex="0">home4</div>
+                <div class="tab-pane" id="5" role="tabpanel" aria-labelledby="5-tab" tabindex="0">home5</div>
+              </div>
             </div>
         </div>
     </div>
 
-    
 
     <footer class="footer">
         <div class="certified-text text-center">
