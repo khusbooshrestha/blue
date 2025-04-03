@@ -58,6 +58,9 @@
         width: 100%;
         display: block;
     }
+    &.form-group--submit {
+        margin-bottom: 0;
+    }
 }
 .form-radio-group {
     .form-label {

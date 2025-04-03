@@ -10,7 +10,8 @@
 .service-banner-layout,
 .ethics,
 .legal,
-.logo-section {
+.logo-section,
+.section-item {
   margin-bottom: rem-calc(40px);
   @include media-breakpoint-up(md) {
     margin-bottom: 30px;
