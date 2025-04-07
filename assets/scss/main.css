@@ -625,6 +625,9 @@ legend {
 	margin-bottom: 0;
 }.header {
 	background: rgba(0, 100, 152, .13);
+	margin-bottom: 30px;
+}.header + .hero-banner {
+	margin-top: -30px;
 }.header-top__wrap {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
@@ -995,6 +998,18 @@ input.btn.has_width {
 	display: block;
 }.form-row {
 	width: 100%;
+}.form-control {
+	background: #e0dbd7;
+	border: 1px solid #f6f5f3;
+	border-radius: 5px;
+	width: 100%;
+}.form-label {
+	color: #000;
+	font-weight: 500;
+	font-size: 1rem;
+	margin-bottom: .625rem;
+}.wpcf7-form-control-wrap {
+	width: 100%;
 }.hero-banner,
 .about-section,
 .stats-section,
@@ -1008,7 +1023,8 @@ input.btn.has_width {
 .ethics,
 .legal,
 .logo-section,
-.section-item {
+.section-item,
+.talent-seeker-form {
 	margin-bottom: 2.5rem;
 }.hero-banner {
 	position: relative;
@@ -1257,6 +1273,9 @@ input.btn.has_width {
 	background-color: rgba(0, 100, 152, .13);
 	font-size: 1.125rem;
 	padding: .9375rem;
+}.talent-seeker-form {
+	background: rgba(246, 245, 243, .42);
+	padding: 1.875rem;
 }.contact {
 	padding: 0 1.25rem;
 }.contact-info .contact-info-header {
@@ -1361,6 +1380,81 @@ input.btn.has_width {
 	font-size: 1rem;
 }.accordion-item .accordion-button:not(.collapsed) {
 	color: #172554;
+}.page-template-default h1 {
+	font-size: 1.375rem;
+	font-weight: 700;
+	color: #172554;
+	margin: 1.25rem 0;
+}.page-template-default h2 {
+	font-size: 1.125rem;
+	font-weight: 700;
+	color: #172554;
+	margin: 1.25rem 0;
+}.page-template-default h3 {
+	font-size: 1rem;
+	font-weight: 700;
+	color: #172554;
+	margin: .9375rem 0;
+}.page-template-default h4,
+.page-template-default h5,
+.page-template-default h6 {
+	font-size: .875rem;
+	font-weight: 700;
+	color: #172554;
+	margin: .9375rem 0;
+}.page-template-default p {
+	font-size: .75rem;
+	line-height: 1.5;
+	margin: 0 0 .9375rem;
+}.page-template-default p + h1,
+.page-template-default p + h2,
+.page-template-default p + h3 {
+	margin-top: 1.875rem;
+}.page-template-default .content_control ol.list-lower-alpha {
+	list-style: lower-alpha;
+}.page-template-default .content_control ol.list-roman {
+	list-style: lower-roman;
+}.page-template-default .content_control ol ul {
+	list-style: auto;
+}.page-template-default .content_control ol + h1,
+.page-template-default .content_control ol + h2,
+.page-template-default .content_control ol + h3,
+.page-template-default .content_control ul + h1,
+.page-template-default .content_control ul + h2,
+.page-template-default .content_control ul + h3 {
+	margin-top: 1.875rem;
+}.page-template-default .content_control ol li:not(:last-child),
+.page-template-default .content_control ul li:not(:last-child) {
+	margin-top: 1rem;
+}.page-template-default .content_control ul ul,
+.page-template-default .content_control ul ol,
+.page-template-default .content_control ol ul,
+.page-template-default .content_control ol ol {
+	margin-top: 1rem;
+}.content-main-inner {
+	width: 100%;
+	padding: 0 .9375rem 2.5rem;
+}.content-main-inner h2 {
+	font-size: 1.0625rem;
+	font-weight: 700;
+	color: #172554;
+	margin-bottom: .9375rem;
+}.content-main-inner h5 {
+	font-size: .875rem;
+	font-weight: 700;
+	color: #172554;
+	margin-bottom: .9375rem;
+}.content-main-inner h6 {
+	font-size: .8125rem;
+	font-weight: 600;
+	color: #000;
+	margin-bottom: .5rem;
+}.content-main-inner p {
+	font-size: .8125rem;
+	line-height: 1.5;
+	margin-bottom: 1.25rem;
+}.content-main-inner figure {
+	margin: 1.25rem -.9375rem;
 }.company {
 	padding: 60px 0;
 	background-color: #f9f9f9;
@@ -1677,6 +1771,99 @@ input.btn.has_width {
 }.logo-item img {
 	width: 100%;
 	object-fit: contain;
+}.photo-gallery {
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 40px 0;
+	text-align: center;
+}.grid {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin-left: -10px;
+	width: auto;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}.grid-item {
+	width: calc(33.333% - 10px);
+	margin-left: 10px;
+	margin-bottom: 10px;
+}.grid-item img {
+	width: 100%;
+	display: block;
+	border-radius: 8px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+}.job-card {
+	max-width: 300px;
+	background: #fff;
+	border-radius: 16px;
+	padding: 1.5rem;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, .05);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	gap: 1rem;
+}.job-card-header {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	gap: .75rem;
+}.company-logo {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	object-fit: cover;
+}.company-info .company-name {
+	font-weight: 600;
+	color: #1f2937;
+}.company-info .job-type {
+	font-size: .85rem;
+	color: #6b7280;
+}.job-title {
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: #111827;
+}.job-schedule {
+	font-weight: 600;
+	color: #1f2937;
+}.job-description {
+	font-size: .9rem;
+	color: #6b7280;
+	line-height: 1.4;
+}.job-footer {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	background: #f3f4f6;
+	padding: .75rem 1rem;
+	border-radius: 12px;
+}.salary {
+	font-weight: 600;
+	color: #1f2937;
+}.apply-btn {
+	background-color: #6366f1;
+	color: #fff;
+	padding: .5rem 1rem;
+	text-decoration: none;
+	border-radius: 8px;
+	font-weight: 600;
+	-webkit-transition: background-color .3s;
+	transition: background-color .3s;
+}.apply-btn:hover {
+	background-color: #4f46e5;
 }.footer .footer-wrap {
 	background-color: #0d1b48;
 	color: white;
@@ -1839,6 +2026,16 @@ input.btn.has_width {
 		-ms-flex-preferred-size: calc(50% - 20px);
 		flex-basis: calc(50% - 20px);
 		margin-bottom: 0;
+	}.form-control {
+		padding: 10px;
+	}.form-label {
+		font-size: 16px;
+		margin-bottom: 15px;
+	}.talent-seeker-form .form-row {
+		gap: 30px;
+	}.talent-seeker-form .form-row .form-group {
+		-ms-flex-preferred-size: calc(50% - 15px);
+		flex-basis: calc(50% - 15px);
 	}.hero-banner,
 	.about-section,
 	.stats-section,
@@ -1852,7 +2049,8 @@ input.btn.has_width {
 	.ethics,
 	.legal,
 	.logo-section,
-	.section-item {
+	.section-item,
+	.talent-seeker-form {
 		margin-bottom: 30px;
 	}.hero-banner .banner-text {
 		margin-inline: auto;
@@ -1938,6 +2136,8 @@ input.btn.has_width {
 	}.certified-text {
 		font-size: 22px;
 		padding: 20px;
+	}.talent-seeker-form {
+		padding: 40px 30px;
 	}.contact {
 		padding: 0 30px;
 	}.contact .contact-wrap {
@@ -1993,6 +2193,68 @@ input.btn.has_width {
 		z-index: -1;
 	}.accordion-item .accordion-button {
 		font-size: 16px;
+	}.page-template-default .woocommerce-breadcrumb {
+		padding-top: 20px;
+		margin-bottom: -50px;
+		position: relative;
+		z-index: 1;
+	}.page-template-default h1 {
+		font-size: 30px;
+		margin: 20px 0;
+	}.page-template-default h2 {
+		font-size: 22px;
+		margin: 20px 0;
+	}.page-template-default h3 {
+		font-size: 20px;
+		margin: 15px 0;
+	}.page-template-default h4,
+	.page-template-default h5,
+	.page-template-default h6 {
+		font-size: 18px;
+		margin: 20px 0;
+	}.page-template-default p {
+		font-size: 14px;
+		line-height: 1.77;
+		margin: 0 0 15px;
+	}.page-template-default p + h1,
+	.page-template-default p + h2,
+	.page-template-default p + h3 {
+		margin-top: 30px;
+	}.page-template-default .content_control ol + h1,
+	.page-template-default .content_control ol + h2,
+	.page-template-default .content_control ol + h3,
+	.page-template-default .content_control ul + h1,
+	.page-template-default .content_control ul + h2,
+	.page-template-default .content_control ul + h3 {
+		margin-top: 30px;
+	}.page-template-default .content_control ol li:not(:last-child),
+	.page-template-default .content_control ul li:not(:last-child) {
+		margin-top: 20px;
+	}.page-template-default .content_control ul ul,
+	.page-template-default .content_control ul ol,
+	.page-template-default .content_control ol ul,
+	.page-template-default .content_control ol ol {
+		margin-top: 20px;
+	}.content-main-inner {
+		padding-bottom: 40px;
+		max-width: 1070px;
+		margin: 0 auto;
+	}.content-main-inner h2 {
+		font-size: 22px;
+		margin-bottom: 20px;
+	}.content-main-inner h5 {
+		font-size: 18px;
+		margin-bottom: 20px;
+	}.content-main-inner h6 {
+		font-size: 16px;
+		margin-bottom: 10px;
+		font-weight: 700;
+	}.content-main-inner p {
+		font-size: 16px;
+		line-height: 1.778;
+		margin-bottom: 25px;
+	}.content-main-inner figure {
+		margin: 30px 0;
 	}.values .values-grid .values-item .icon {
 		margin-bottom: 20px;
 	}.values .values-grid .values-item .values-title {
@@ -2101,7 +2363,8 @@ input.btn.has_width {
 	.ethics,
 	.legal,
 	.logo-section,
-	.section-item {
+	.section-item,
+	.talent-seeker-form {
 		margin-bottom: 40px;
 	}.hero-banner .banner-text {
 		max-width: 870px;
@@ -2145,6 +2408,8 @@ input.btn.has_width {
 	}.certified-text {
 		font-size: 27px;
 		padding: 27px;
+	}.talent-seeker-form {
+		padding: 60px 40px;
 	}.contact {
 		padding: 0 40px;
 	}.contact-info .contact-info-header {
@@ -2154,6 +2419,44 @@ input.btn.has_width {
 	}.location-item-wrap .location-content .location-title {
 		font-size: 24px;
 		margin-bottom: 20px;
+	}.page-template-default h1 {
+		font-size: 36px;
+		margin: 25px 0;
+	}.page-template-default h2 {
+		font-size: 26px;
+		margin: 25px 0;
+	}.page-template-default h3 {
+		font-size: 24px;
+		margin: 20px 0;
+	}.page-template-default h4,
+	.page-template-default h5,
+	.page-template-default h6 {
+		font-size: 20px;
+		margin: 25px 0;
+	}.page-template-default p {
+		font-size: 16px;
+		margin: 0 0 20px;
+	}.page-template-default p + h1,
+	.page-template-default p + h2,
+	.page-template-default p + h3 {
+		margin-top: 40px;
+	}.page-template-default .content_control ol + h1,
+	.page-template-default .content_control ol + h2,
+	.page-template-default .content_control ol + h3,
+	.page-template-default .content_control ul + h1,
+	.page-template-default .content_control ul + h2,
+	.page-template-default .content_control ul + h3 {
+		margin-top: 40px;
+	}.content-main-inner {
+		padding-bottom: 60px;
+	}.content-main-inner h2 {
+		font-size: 26px;
+		margin-bottom: 25px;
+	}.content-main-inner h5 {
+		font-size: 22px;
+		margin-bottom: 25px;
+	}.content-main-inner figure {
+		margin: 45px 0;
 	}.values .values-grid .values-item .values-title {
 		font-size: 22px;
 	}.conduct-section {
@@ -2201,7 +2504,8 @@ input.btn.has_width {
 	.ethics,
 	.legal,
 	.logo-section,
-	.section-item {
+	.section-item,
+	.talent-seeker-form {
 		margin-bottom: 60px;
 	}.hero-banner .banner-title {
 		font-size: 42px;
@@ -2241,10 +2545,50 @@ input.btn.has_width {
 		margin-bottom: 40px;
 	}.logo-layout__wrap {
 		padding: 60px;
+	}.talent-seeker-form {
+		padding: 80px 40px;
 	}.contact {
 		padding: 0 60px;
 	}.location-item-wrap .location-content .location-title {
 		font-size: 28px;
+	}.page-template-default h1 {
+		font-size: 42px;
+		margin: 30px 0;
+	}.page-template-default h2 {
+		font-size: 32px;
+		margin: 30px 0;
+	}.page-template-default h3 {
+		font-size: 26px;
+		margin: 25px 0;
+	}.page-template-default h4,
+	.page-template-default h5,
+	.page-template-default h6 {
+		font-size: 22px;
+		margin: 30px 0;
+	}.page-template-default p {
+		font-size: 18px;
+		margin: 0 0 25px;
+	}.page-template-default p + h1,
+	.page-template-default p + h2,
+	.page-template-default p + h3 {
+		margin-top: 50px;
+	}.page-template-default .content_control ol + h1,
+	.page-template-default .content_control ol + h2,
+	.page-template-default .content_control ol + h3,
+	.page-template-default .content_control ul + h1,
+	.page-template-default .content_control ul + h2,
+	.page-template-default .content_control ul + h3 {
+		margin-top: 50px;
+	}.content-main-inner h2 {
+		font-size: 32px;
+		margin-bottom: 30px;
+	}.content-main-inner h5 {
+		font-size: 24px;
+		margin-bottom: 30px;
+	}.content-main-inner h6 {
+		font-size: 18px;
+	}.content-main-inner p {
+		margin-bottom: 30px;
 	}.conduct-section {
 		padding: 60px;
 	}.service-content-layout {
@@ -2287,7 +2631,8 @@ input.btn.has_width {
 	.ethics,
 	.legal,
 	.logo-section,
-	.section-item {
+	.section-item,
+	.talent-seeker-form {
 		margin-bottom: 100px;
 	}.hero-banner .banner-title {
 		font-size: 48px;
@@ -2316,6 +2661,35 @@ input.btn.has_width {
 		padding: 100px 120px;
 	}.location-item-wrap .location-content .location-title {
 		font-size: 34px;
+	}.page-template-default h1 {
+		font-size: 48px;
+	}.page-template-default h2 {
+		font-size: 38px;
+	}.page-template-default h3 {
+		font-size: 32px;
+	}.page-template-default h4,
+	.page-template-default h5,
+	.page-template-default h6 {
+		font-size: 24px;
+	}.page-template-default p {
+		margin: 0 0 30px;
+	}.page-template-default p + h1,
+	.page-template-default p + h2,
+	.page-template-default p + h3 {
+		margin-top: 60px;
+	}.page-template-default .content_control ol + h1,
+	.page-template-default .content_control ol + h2,
+	.page-template-default .content_control ol + h3,
+	.page-template-default .content_control ul + h1,
+	.page-template-default .content_control ul + h2,
+	.page-template-default .content_control ul + h3 {
+		margin-top: 60px;
+	}.content-main-inner {
+		padding-bottom: 80px;
+	}.content-main-inner h2 {
+		font-size: 38px;
+	}.content-main-inner figure {
+		margin: 60px 0;
 	}.conduct-section {
 		padding: 60px 120px;
 	}.service-content-layout {
@@ -2397,6 +2771,8 @@ input.btn.has_width {
 		gap: 20px;
 	}.vision-mission .vm-item {
 		padding: 20px;
+	}.grid-item {
+		width: calc(50% - 10px);
 	}
 }@media (max-width: 767.98px) {
 	.header-navigation .nav-opener {
@@ -2405,5 +2781,10 @@ input.btn.has_width {
 		order: -10;
 	}.hero-banner .banner-content {
 		margin-top: -2.5rem;
+	}
+}@media (max-width: 480px) {
+	.grid-item {
+		width: 100%;
+		margin-left: 0;
 	}
 }

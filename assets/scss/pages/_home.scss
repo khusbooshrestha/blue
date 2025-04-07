@@ -11,7 +11,8 @@
 .ethics,
 .legal,
 .logo-section,
-.section-item {
+.section-item,
+.talent-seeker-form {
   margin-bottom: rem-calc(40px);
   @include media-breakpoint-up(md) {
     margin-bottom: 30px;

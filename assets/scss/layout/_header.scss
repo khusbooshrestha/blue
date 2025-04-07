@@ -1,6 +1,10 @@
 .header {
     background: rgba($theme-secondary-color,0.13);
     @extend %section-padding;
+    margin-bottom: 30px;
+    & + .hero-banner {
+        margin-top: -30px;
+    }
 }
 
 .header-top__wrap {
