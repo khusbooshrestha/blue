@@ -1969,6 +1969,22 @@ input.btn.has_width {
 	transition: background-color .3s;
 }.apply-btn:hover {
 	background-color: #4f46e5;
+}.sucess-stories-wrap {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	border-radius: 20px;
+	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .25);
+	padding: 1.875rem;
+	gap: 1.25rem;
+}.sucess-stories-wrap .sucess-item {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 100%;
+	flex: 0 0 100%;
+	max-width: 100%;
 }.footer .footer-wrap {
 	background-color: #0d1b48;
 	color: white;
@@ -2523,6 +2539,14 @@ input.btn.has_width {
 	}.recruitment-step .recruitment-step-title {
 		font-size: 22px;
 		margin-bottom: 30px;
+	}.sucess-stories-wrap {
+		padding: 30px;
+		gap: 30px;
+	}.sucess-stories-wrap .sucess-item {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(50% - 15px);
+		flex: 0 0 calc(50% - 15px);
+		max-width: calc(50% - 15px);
 	}.footer .footer-wrap {
 		padding: 50px 20px;
 	}.footer .footer-container .footer-logo {
@@ -2761,6 +2785,14 @@ input.btn.has_width {
 		max-width: 20%;
 	}.recruitment-step .recruitment-step-title {
 		margin-bottom: 50px;
+	}.sucess-stories-wrap {
+		padding: 40px;
+		gap: 40px;
+	}.sucess-stories-wrap .sucess-item {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(25% - 20px);
+		flex: 0 0 calc(25% - 20px);
+		max-width: calc(25% - 20px);
 	}
 }@media (min-width: 1200px) {
 	.header,
@@ -2908,6 +2940,14 @@ input.btn.has_width {
 		gap: 90px;
 	}.recruitment-step .recruitment-step-title {
 		margin-bottom: 60px;
+	}.sucess-stories-wrap {
+		padding: 40px 60px;
+		gap: 50px;
+	}.sucess-stories-wrap .sucess-item {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(25% - 25px);
+		flex: 0 0 calc(25% - 25px);
+		max-width: calc(25% - 25px);
 	}
 }@media (min-width: 1300px) {
 	.header,
@@ -3017,6 +3057,14 @@ input.btn.has_width {
 		-ms-flex: 0 0 calc(25% - 75px);
 		flex: 0 0 calc(25% - 75px);
 		max-width: calc(25% - 75px);
+	}.sucess-stories-wrap {
+		padding: 40px 70px;
+		gap: 80px;
+	}.sucess-stories-wrap .sucess-item {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(25% - 40px);
+		flex: 0 0 calc(25% - 40px);
+		max-width: calc(25% - 40px);
 	}
 }@media (min-width: 1920px) {
 	.testimonials .testimonial-slider .testimonial.slick-slide {
@@ -3082,6 +3130,9 @@ input.btn.has_width {
 		-webkit-transform: translate(0, 0);
 		-ms-transform: translate(0, 0);
 		transform: translate(0, 0);
+	}.sucess-stories-wrap {
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
 	}
 }@media (max-width: 768px) {
 	.company .company-image {
