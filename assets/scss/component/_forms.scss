@@ -140,7 +140,7 @@
 }
 
 .form-control {
-    background: #E0DBD7;
+    background: #F6F5F3;
     border: 1px solid#F6F5F3;
     border-radius: 5px;
     width: 100%;
@@ -149,7 +149,9 @@
         padding: 10px;
     }
 }
-
+input[type="textarea"].form-control {
+    min-height: 150px;
+}
 .form-label {
     color: $black;
     font-weight: 500;
@@ -185,6 +187,9 @@
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    &.status-options-vertical {
+        flex-direction: column;
+    }
 }
 
 .option {
@@ -207,4 +212,8 @@
     height: 20px;
     accent-color: #ccc;
     border-radius: 5px;
+}
+
+.grievance-form-wrap {
+    @extend %section-padding;
 }

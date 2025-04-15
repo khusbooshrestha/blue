@@ -12,7 +12,10 @@
 .legal,
 .logo-section,
 .section-item,
-.talent-seeker-form {
+.talent-seeker-form,
+.repository-level1-wrap,
+.repository-level2-wrap,
+.repository-level3-wrap {
   margin-bottom: rem-calc(40px);
 
   @include media-breakpoint-up(md) {

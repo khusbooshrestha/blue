@@ -58,12 +58,15 @@
     <div class="grievance-form">
         <div class="container">
             <h2 class="section-title text-center">
-                Grievance Form
+                गुनासो फारम
                 <br>
                 Grievance Form
             </h2>
             <div class="grievance-form-wrap">
                 <h3 class="grievance-title text-center">
+                    <span>
+                         इच्छीक मात्र, आफ्नो व्यक्तिगत विवरण भर्न अनिवार्य छैन ।
+                    </span>
                     (Filling Your Personal Details Is Optional, Not Mandatory)
                 </h3>
                 <form action="">
@@ -84,8 +87,8 @@
                                 required />
                         </div>
                     </div>
-                    <div class="form-radio">
-                        <label class="section-label">अवस्था/Status :</label>
+                    <div class="form-radio form-group">
+                        <label class="form-label">अवस्था/Status :</label>
                         <div class="status-options">
                             <label class="option">
                                 कर्मचारी<br><span>Employee</span>
@@ -104,6 +107,114 @@
                                 <input type="radio" name="status" value="client">
                             </label>
                         </div>
+                    </div>
+                    <div class="form-radio form-group">
+                        <label class="form-label">तपाई कुन कुराको भन्न चहानु हुन्छ / What do you want to say?:</label>
+                        <div class="status-options">
+                            <label class="option">
+                                सुझाव<br><span>suggestion</span>
+                                <input type="radio" name="status" value="suggestion">
+                            </label>
+                            <label class="option">
+                                उजुरी<br><span>complaint</span>
+                                <input type="radio" name="status" value="complaint">
+                            </label>
+                            <label class="option">
+                                प्रतिक्रिया<br><span>Grievance</span>
+                                <input type="radio" name="status" value="Grievance">
+                            </label>
+                            <label class="option">
+                                <span>feedback</span>
+                                <input type="radio" name="status" value="feedback">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="suggestion" class="form-label">तपाइको सुझावके केछन् ?
+                            <br>
+                            What are your suggestions?</label>
+                        <input type="textarea" id="suggestion" class="form-control" placeholder="Enter Your suggestion "
+                            required />
+                    </div>
+                    <div class="form-group">
+                        <label for="complaints" class="form-label">तपाइको उजुरी के के छन् ?
+                            <br>
+                            What are your Complaints?</label>
+                        <input type="textarea" id="complaints" class="form-control" placeholder="Enter Your complaints "
+                            required />
+                    </div>
+                    <div class="form-group">
+                        <label for="feebacks" class="form-label">तपाइको प्रतिक्रिया के के छन् ?
+                            <br>
+                            What are your feebacks?</label>
+                        <input type="textarea" id="feebacks" class="form-control" placeholder="Enter Your complaints "
+                            required />
+                    </div>
+                    <div class="form-radio form-group">
+                        <label class="form-label">गुनासोको प्रकृती Nature of Grievance:</label>
+                        <div class="status-options status-options-vertical">
+                            <label class="option">
+                                भेदभाव / <br><span>Discrimination</span>
+                                <input type="radio" name="nature" value="Discrimination">
+                            </label>
+                            <label class="option">
+                                उत्पीडन /<br><span>Harassment</span>
+                                <input type="radio" name="nature" value="Harassment">
+                            </label>
+                            <label class="option">
+                                अनुचित व्यवहार /<br><span> Unfair Treatment</span>
+                                <input type="radio" name="nature" value="Unfair Treatment">
+                            </label>
+                            <label class="option">
+                                कम्पनी नीतिहरूको उल्लङ्घन /<br><span>Violation of Company Policies</span>
+                                <input type="radio" name="nature" value="Violation of Company Policies">
+                            </label>
+                            <label class="option">
+                                ्वास्थ्य र सुरक्षा सरोकारहरू /<br><span> Health and Safety Concerns</span>
+                                <input type="radio" name="nature" value="Health and Safety Concerns">
+                            </label>
+                            <label class="option">
+                                अन्य (निर्दिष्ट गर्नुहोस) /<br><span> Other (Specify):</span>
+                                <input type="radio" name="nature" value="other">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="feebacks" class="form-label">गुनासो विवरणः
+                            <br>
+                            Description of Grievance:</label>
+                        <input type="textarea" id="feebacks" class="form-control" placeholder="Enter Your Grievance "
+                            required />
+                    </div>
+                    <div class="form-radio form-group">
+                        <label class="section-label">के यो घटनाको बारे तपाईले पहिलो पटक बोल्दै हुनु हुन्छ?
+                            <br>
+                            Is this the first time you have raised this concern about this person?
+                        </label>
+                        <div class="status-options">
+                            <label class="option">
+                                हो / Yes</span>
+                                <input type="radio" name="status" value="yes">
+                            </label>
+                            <label class="option">
+                                होइन / No</span>
+                                <input type="radio" name="status" value="no">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="feebacks" class="form-label">होइन भने पहिले यो गुनासोको कार्यान्वयन के भयो ?
+                            <br>
+                            If not, what happened to the implementation of this grievance first?</label>
+                        <input type="textarea" id="feebacks" class="form-control" placeholder="Enter Your Grievance "
+                            required />
+                    </div>
+                    <div class="form-group">
+                        <label for="feebacks" class="form-label">के तपाइँसँग कुनै थप जानकारी वा गुनासो छ? यदि छ भने, कृपया व्याख्या गर्नुहोस् ।
+                            <br>
+                            Do you have any additional information or Grievance? If so, please explain. </label>
+                        <input type="textarea" id="feebacks" class="form-control" placeholder="Enter Your Grievance "
+                            required />
                     </div>
                 </form>
             </div>
