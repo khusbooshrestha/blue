@@ -6,13 +6,15 @@ input.btn {
     outline: none;
     box-shadow: none;
     text-decoration: none;
-    font-size: rem-calc(16px);
+    font-size: rem-calc(14px);
     line-height: 1.5;
     border: 1px solid $theme-primary-color;
     background: $theme-primary-color;
     color: $white;
-    padding: rem-calc(6px 32px);
+    padding: rem-calc(6px 7px);
     display: inline-block;
+    border-radius: 0;
+
     @include media-breakpoint-up(md) {
         padding: 5px 30px;
         font-size: 16px;
@@ -45,8 +47,8 @@ input.btn {
         }
 
         &:hover {
-            background: rgba($theme-primary-color,0.9);
-            border-color: rgba($theme-primary-color,0.9);
+            background: rgba($theme-primary-color, 0.9);
+            border-color: rgba($theme-primary-color, 0.9);
             color: $white;
         }
     }
@@ -59,14 +61,14 @@ input.btn {
             line-height: 1.25;
             padding: 7px 10px;
         }
-        
+
     }
 
     &.btn-md {
         font-size: rem-calc(16px);
 
         @include media-breakpoint-up(md) {
-            font-size: 16px; 
+            font-size: 16px;
             line-height: 1.25;
             padding: 8px 15px;
         }
@@ -74,11 +76,12 @@ input.btn {
 
     &.btn-lg {
         padding: rem-calc(8px 32px);
+
         @include media-breakpoint-up(md) {
             padding: 8px 30px;
             font-size: 18px;
         }
-    
+
         @include media-breakpoint-up(lg) {
             padding: 10px 20px;
             font-size: 20px;
@@ -99,6 +102,7 @@ input.btn {
             }
         }
     }
+
     &.btn-secondary {
         background: $theme-secondary-color;
         color: $white;
@@ -121,18 +125,22 @@ input.btn {
             }
 
             &:hover {
-                background: rgba($theme-secondary-color,0.9);
-                border-color: rgba($theme-secondary-color,0.9);
-                color: $white;;
+                background: rgba($theme-secondary-color, 0.9);
+                border-color: rgba($theme-secondary-color, 0.9);
+                color: $white;
+                ;
             }
         }
     }
+
     &.btn-round {
         border-radius: rem-calc(5px);
+
         @include media-breakpoint-up(md) {
             border-radius: 10px;
         }
     }
+
     &.btn-outline {
         background: transparent;
         color: $theme-primary-color;
@@ -156,7 +164,8 @@ input.btn {
             &:hover {
                 background: $black;
                 border-color: $black;
-                color: $white;;
+                color: $white;
+                ;
             }
         }
     }
@@ -176,7 +185,7 @@ input.btn {
 }
 
 .btn-link {
-    transition: .25s cubic-bezier(.215,.61,.355,1);
+    transition: .25s cubic-bezier(.215, .61, .355, 1);
     position: relative;
     line-height: 1;
     background: transparent;
@@ -185,9 +194,11 @@ input.btn {
     font-size: rem-calc(20px);
     margin-bottom: rem-calc(6px);
     color: $black;
+
     @include media-breakpoint-up(md) {
         font-size: 20px;
     }
+
     &:before {
         content: "";
         position: absolute;
@@ -197,11 +208,13 @@ input.btn {
         width: 100%;
         height: 1px;
         background: $black;
-        transition: .25s cubic-bezier(.215,.61,.355,1);
+        transition: .25s cubic-bezier(.215, .61, .355, 1);
     }
+
     &:hover {
         color: $black;
         text-decoration: none;
+
         &:before {
             bottom: -3px;
             height: 3px;
@@ -218,6 +231,7 @@ input.btn {
     text-decoration: underline;
     text-underline-offset: 4px;
     transition: 0.5s ease text-underline-offset;
+
     &:hover {
         color: $black;
         text-underline-offset: 6px;
