@@ -42,23 +42,23 @@
 }
 
 // Common padding
-%p-80 {
-	padding: rem-calc(60px 20px);
+%p-100 {
+	padding-block: rem-calc(40px);
 
 	@include media-breakpoint-up(md) {
-		padding: 30px;
+		padding-block: 40px;
 	}
 
 	@include media-breakpoint-up(lg) {
-		padding: 40px
+		padding-block: 50px;
 	}
 
 	@include media-breakpoint-up(xl) {
-		padding: 60px
+		padding-block: 60px;
 	}
 
 	@include media-breakpoint-up(xxl) {
-		padding: 80px;
+		padding-block: 100px;
 	}
 }
 
@@ -70,15 +70,35 @@
 	}
 
 	@include media-breakpoint-up(lg) {
-		padding-inline: 30px
+		padding-inline: 30px;
 	}
 
 	@include media-breakpoint-up(xl) {
-		padding-inline: 60px
+		padding-inline: 60px;
 	}
 
 	@include media-breakpoint-up(xxl) {
 		padding-inline: 125px;
+	}
+}
+
+%section-margin {
+	margin-bottom: rem-calc(40px);
+
+	@include media-breakpoint-up(md) {
+		margin-bottom: 30px;
+	}
+
+	@include media-breakpoint-up(lg) {
+		margin-bottom: 40px;
+	}
+
+	@include media-breakpoint-up(xl) {
+		margin-bottom: 60px;
+	}
+
+	@include media-breakpoint-up(xxl) {
+		margin-bottom: 100px;
 	}
 }
 

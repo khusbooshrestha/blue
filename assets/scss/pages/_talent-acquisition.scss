@@ -1,4 +1,15 @@
+.recruitment-process {
+    @extend %section-padding;
+    @extend %p-100;
+}
+
 .recruitment-step {
+    @extend %section-margin;
+
+    @include media-breakpoint-down(sm) {
+        padding-inline: rem-calc(12px);
+    }
+
     .container {
         max-width: 778px;
     }
@@ -6,6 +17,7 @@
     .recruitment-step-title {
         color: $theme-primary-color;
         font-size: rem-calc(20px);
+        margin-bottom: rem-calc(20px);
 
         @include media-breakpoint-up(md) {
             font-size: 22px;

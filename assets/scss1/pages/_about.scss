@@ -1,0 +1,378 @@
+.company {
+    padding: 60px 0;
+    background-color: #f9f9f9; // Light background to maintain contrast
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .section-title {
+    }
+
+    .company-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+
+        .company-text {
+            width: 60%;
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .company-image {
+            width: 40%;
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+
+    // Responsive Design
+    @media (max-width: 992px) {
+        .company-content {
+            flex-direction: column;
+            text-align: center;
+
+            .company-text {
+                width: 100%;
+            }
+
+            .company-image {
+                width: 80%;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .company-image {
+            width: 100%;
+        }
+    }
+}
+
+.values {
+    padding: 60px 0;
+    background-color: rgba($theme-secondary-color, 0.13);
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .section-title {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    .values-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+        .values-item {
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+
+            .icon {
+                margin-bottom: rem-calc(15px);
+                @include media-breakpoint-up(md) {
+                    margin-bottom: 20px;
+                }
+                img {
+                    width: 40px;
+                    height: auto;
+                }
+            }
+
+            .values-title {
+                font-weight: 700;
+                color: $theme-primary-color;
+                font-size: rem-calc(18px);
+                margin-bottom: rem-calc(15px);
+
+                @include media-breakpoint-up(md) {
+                    margin-bottom: 25px;
+                    font-size: 20px;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    font-size: 22px;
+                }
+            }
+
+            .values-text {
+                color: $theme-primary-color;
+                font-size: 16px;
+                line-height: 1.5;
+                p {
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    // Responsive Design
+    @media (max-width: 992px) {
+        .values-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .values-grid {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+.leadership {
+    padding: 60px 0;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        margin-bottom: 30px;
+        color: #555;
+    }
+
+    .leader {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        background: $theme-primary-color;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        color: $white;
+        .leader-image {
+            flex: 1;
+            max-width: 300px;
+
+            img {
+                width: 100%;
+                border-radius: 8px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        .leader-text {
+            flex: 2;
+
+            p {
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 15px;
+            }
+
+            .leader-name {
+                font-size: 20px;
+                font-weight: bold;
+                margin-top: 10px;
+            }
+
+            .leader-position {
+                font-size: 16px;
+                color: #777;
+            }
+        }
+    }
+
+    // Responsive Design
+    @media (max-width: 992px) {
+        .leader {
+            flex-direction: column;
+            text-align: center;
+
+            .leader-image {
+                max-width: 250px;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .leader {
+            padding: 20px;
+            gap: 20px;
+        }
+    }
+}
+
+.vision-mission {
+    padding: 60px 0;
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .vm-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); // 3 equal columns
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    .vm-item {
+        padding: 30px;
+        text-align: center;
+        transition: transform 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .vm-img {
+            margin-bottom: rem-calc(10px);
+            @include media-breakpoint-up(md) {
+                margin-bottom: 20px;
+            }
+        }
+        h3 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: $theme-primary-color;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: $theme-primary-color;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+
+    // Responsive Design
+    @media (max-width: 992px) {
+        .vm-grid {
+            grid-template-columns: 1fr; // Stack items in one column
+        }
+    }
+
+    @media (max-width: 768px) {
+        .vm-item {
+            padding: 20px;
+        }
+    }
+}
+
+
+.legal {
+    .legal-docs {
+        background: $theme-primary-color;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+}
+
+.awards {
+    .awards-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .awards-img {
+        margin-bottom: rem-calc(20px);
+        @include media-breakpoint-up(md) {
+            margin-bottom: 30px;
+        }
+        img {
+            object-fit: contain;
+            margin-inline: auto;
+        }
+    }
+}
+
+.commitments {
+    padding: 50px 0;
+    text-align: center;
+    
+    .commitments-wrapper {
+        position: relative;
+        background: $theme-primary-color;
+        gap: 20px;
+        color: $white;
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 100%;
+            background: $white;
+        }
+
+        .commitment-item {
+            width: calc(50% - 20px);
+            padding: 30px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .nepali-text {
+            font-family: 'Kalimati', sans-serif; // Use a suitable Nepali font
+        }
+    }
+}
+
+
+.conduct-section {
+    background: rgba($theme-secondary-color, 0.13);
+    padding: rem-calc(40px 20px);
+
+    @include media-breakpoint-up(md) {
+        padding: 30px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 40px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding: 60px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        padding: 60px 120px;
+    }
+}

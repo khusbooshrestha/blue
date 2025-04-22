@@ -73,6 +73,7 @@ body {
   font-family: "Be Vietnam Pro", sans-serif;
   font-weight: 500;
   margin: 0;
+  color: $theme-primary-color;
 }
 
 .btn-wrap {
@@ -139,6 +140,7 @@ body {
 .container {
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0;
 }
 
 .backdrop-active {
@@ -218,5 +220,26 @@ body {
     @include media-breakpoint-up(md) {
       font-size: 18px;
     }
+  }
+}
+
+.content-section {
+  @extend %section-padding;
+  margin-block: rem-calc(40px);
+
+  @include media-breakpoint-up(md) {
+    margin-block: 30px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-block: 40px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin-block: 60px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    margin-block: 100px;
   }
 }

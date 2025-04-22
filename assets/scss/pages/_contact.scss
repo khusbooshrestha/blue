@@ -1,16 +1,17 @@
 .contact {
-    padding: rem-calc(0 20px);
+    margin-top: 0;
+    padding: rem-calc(40px 20px);
 
     @include media-breakpoint-up(md) {
-        padding: 0 30px;
+        padding: 40px 30px;
     }
 
     @include media-breakpoint-up(lg) {
-        padding: 0 40px;
+        padding: 60px 40px;
     }
 
     @include media-breakpoint-up(xl) {
-        padding: 0 60px;
+        padding: 80px 60px;
     }
 
     @include media-breakpoint-up(xxl) {
@@ -72,9 +73,13 @@
         ul {
             li {
                 color: $theme-primary-color;
+                list-style: none;
+                display: flex;
+                gap: rem-calc(7px);
 
                 @include media-breakpoint-up(md) {
                     font-size: 16px;
+                    gap: 10px;
                 }
 
                 &:not(:last-child) {
@@ -89,19 +94,23 @@
                     }
                 }
 
+                span {
+                    &.icon {
+                        display: inline-block;
+                    }
+                }
+
                 a {
                     color: $theme-primary-color;
+                    gap: rem-calc(7px);
+                    display: flex;
+
+                    @include media-breakpoint-up(md) {
+                        gap: 10px;
+                    }
 
                     &:hover {
                         color: $theme-secondary-color;
-                    }
-
-                    .icon {
-                        margin-right: rem-calc(5px);
-
-                        @include media-breakpoint-up(md) {
-                            margin-right: 5px;
-                        }
                     }
                 }
             }
@@ -110,9 +119,13 @@
 }
 
 .contact-form {
+    @include media-breakpoint-down(sm) {
+        margin-top: rem-calc(30px);
+    }
 
     .form-label {
-        color: $theme-gray;
+        margin-bottom: 0;
+        color: $theme-primary-color;
     }
 
     .form-control {
@@ -122,13 +135,83 @@
         border: 1px solid #8D8D8D;
         border-width: 0 0 1px 0;
         border-radius: 0;
+        padding-inline: 0;
+
         @include media-breakpoint-up(md) {
             padding: 15px 0;
         }
     }
+
+    textarea.form-control {
+        min-height: rem-calc(80px);
+        height: rem-calc(80px);
+
+        @include media-breakpoint-up(md) {
+            min-height: 100px;
+            height: 100px;
+        }
+    }
+
     .form-group--submit {
         justify-content: flex-end;
     }
+
+    .form-radio-group {
+        .form-label {
+            margin-bottom: rem-calc(16px);
+
+            @include media-breakpoint-up(md) {
+                margin-bottom: 30px;
+            }
+        }
+
+        .custom-radio {
+            .wpcf7-list-item {
+                .wpcf7-list-item-label {
+                    margin-left: 0;
+                    padding-left: rem-calc(20px);
+
+                    @include media-breakpoint-up(md) {
+                        padding-left: 25px;
+                    }
+
+                    &:before {
+                        left: 0;
+                        right: auto;
+                    }
+
+                    &:after {
+                        left: 2px;
+                        right: auto;
+
+                        @include media-breakpoint-up(md) {
+                            left: 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .wpcf7 {
+
+        form.invalid,
+        form.unaccepted,
+        form.payment-required {
+            .wpcf7-response-output {
+                text-align: center;
+            }
+        }
+
+        .wpcf7-spinner {
+            display: none;
+        }
+    }
+}
+
+.location-item {
+    @extend %section-padding;
+    @extend %section-margin;
 }
 
 .location-item-wrap {
@@ -146,13 +229,16 @@
         align-items: center;
         flex-direction: column;
         padding: rem-calc(20px);
+        text-align: center;
+
         @include media-breakpoint-up(md) {
             padding: 50px;
         }
+
         .location-title {
             color: $theme-primary-color;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: rem-calc(20px);
             font-size: rem-calc(20px);
 
             @include media-breakpoint-up(md) {
@@ -176,13 +262,27 @@
     }
 }
 
+.cta_section {
+    .section-header {
+        .section-subtitle {
+            margin-inline: auto;
+
+            @include media-breakpoint-up(md) {
+                max-width: 60%;
+            }
+        }
+    }
+}
+
 .faq {
     .faq-wrap {
         align-items: center;
     }
+
     .nav {
         border: 1px solid #f7f7f7;
         border-bottom: none;
+
         @include media-breakpoint-up(md) {
             max-width: 50%;
             flex: 0 0 50%;
@@ -192,16 +292,18 @@
             width: 100%;
             background: $white;
             border-bottom: 1px solid #f7f7f7;
-            
+
 
             button {
                 width: 100%;
                 position: relative;
                 color: $theme-primary-color;
                 padding: rem-calc(10px 20px 10px);
+
                 @include media-breakpoint-up(md) {
                     padding: 24px 50px 24px;
                 }
+
                 &:hover {
                     color: $theme-primary-color;
                 }
@@ -218,10 +320,12 @@
                     transform: translateY(-100%);
                     transition: transform 0.3s ease;
                 }
+
                 .nav-item.show .nav-link,
                 .nav-link.active {
                     color: $theme-primary-color;
                     background: #FAFBFF;
+
                     &:before {
                         background: $theme-secondary-color;
                     }
@@ -234,6 +338,7 @@
         background: #FAFBFF;
         box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         border-radius: rem-calc(10px);
+
         @include media-breakpoint-up(md) {
             border-radius: 15px;
             max-width: 50%;

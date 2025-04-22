@@ -53,11 +53,15 @@
   color: $white;
   position: relative;
 
-  .bg-image {
+  .service-bg-image {
     position: relative;
 
     img {
       width: 100%;
+
+      @include media-breakpoint-down(sm) {
+        min-height: rem-calc(300px);
+      }
     }
   }
 
@@ -69,13 +73,15 @@
     top: 50%;
     transform: translate(0, -50%);
     margin-inline: auto;
-    padding: rem-calc(40px);
+    padding: rem-calc(20px 12px);
 
     @include media-breakpoint-up(md) {
+      padding: 30px;
       max-width: 640px;
     }
 
     @include media-breakpoint-up(lg) {
+      padding: 40px;
       max-width: 940px;
     }
   }
@@ -83,7 +89,7 @@
   .service-banner-title {
     color: inherit;
     font-weight: 700;
-    font-size: rem-calc(32px);
+    font-size: rem-calc(26px);
     line-height: 1.1;
     margin-block: 0 rem-calc(15px);
 
@@ -108,7 +114,7 @@
   }
 
   .service-banner-text {
-    font-size: rem-calc(12px);
+    font-size: rem-calc(14px);
 
     @include media-breakpoint-up(md) {
       font-size: 16px;

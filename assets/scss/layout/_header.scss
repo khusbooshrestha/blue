@@ -1,9 +1,22 @@
 .header {
+  position: relative;
   background: rgba($theme-secondary-color, 0.13);
   @extend %section-padding;
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     padding-block: rem-calc(10px);
+  }
+
+  &:before {
+    @include media-breakpoint-up(lg) {
+      content: "";
+      position: absolute;
+      background: $white;
+      left: 0;
+      right: 0;
+      bottom: -6px;
+      height: 40px;
+    }
   }
 
   &+.hero-banner {
@@ -14,35 +27,35 @@
     }
   }
 
-  &+div {
-    margin-top: rem-calc(40px);
+  // &+div {
+  //   margin-top: rem-calc(40px);
 
-    @include media-breakpoint-up(md) {
-      margin-top: 60px;
-    }
+  //   @include media-breakpoint-up(md) {
+  //     margin-top: 60px;
+  //   }
 
-    @include media-breakpoint-up(lg) {
-      margin-top: 80px;
-    }
+  //   @include media-breakpoint-up(lg) {
+  //     margin-top: 80px;
+  //   }
 
-    @include media-breakpoint-up(xl) {
-      margin-top: 100px;
-    }
+  //   @include media-breakpoint-up(xl) {
+  //     margin-top: 100px;
+  //   }
 
-    @include media-breakpoint-up(xxl) {
-      margin-top: 120px;
-    }
-  }
+  //   @include media-breakpoint-up(xxl) {
+  //     margin-top: 120px;
+  //   }
+  // }
 }
 
 .header-top__wrap {
   align-items: center;
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     flex-wrap: wrap;
   }
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     padding: 26px 0;
   }
 
@@ -60,11 +73,11 @@
     color: $theme-secondary-color;
     text-align: center;
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       display: none;
     }
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       max-width: 30%;
       flex: 0 0 30%;
     }
@@ -85,7 +98,17 @@
       padding-top: rem-calc(10px);
     }
 
+    @include media-breakpoint-only(md) {
+      order: 2;
+      padding-left: rem-calc(30px);
+    }
+
     @include media-breakpoint-up(md) {
+      max-width: 60%;
+      flex: 0 0 60%;
+    }
+
+    @include media-breakpoint-up(lg) {
       gap: 20px;
       justify-content: flex-end;
       max-width: 40%;
@@ -106,11 +129,12 @@
   width: rem-calc(27px);
   height: rem-calc(27px);
 
-  @include media-breakpoint-up(md) {
-    margin-top: 10px;
+  @include media-breakpoint-only(md) {
+    order: 3;
   }
 
   @include media-breakpoint-up(lg) {
+    margin-top: 10px;
     display: none;
   }
 
@@ -182,19 +206,14 @@
 }
 
 .header-navigation {
-  @include media-breakpoint-up(md) {
-    margin-bottom: -30px;
-  }
-
-
   .main-navigation {
     background: $theme-secondary-color;
-    display: flex;
-    justify-content: center;
-    z-index: 1;
     position: relative;
 
     @include media-breakpoint-up(lg) {
+      display: flex;
+      justify-content: center;
+      z-index: 1;
       border-radius: 50px;
       padding: 21px 10px;
     }
@@ -210,12 +229,17 @@
       opacity: 0;
       visibility: hidden;
       z-index: 99;
+      padding: 0 20px;
 
       .nav-active & {
         opacity: 1;
         visibility: visible;
         transform: translate(0, 0);
       }
+    }
+
+    @include media-breakpoint-down(sm) {
+      top: rem-calc(105.7px);
     }
 
     .menu {
@@ -234,6 +258,10 @@
 
       li {
         position: relative;
+
+        @include media-breakpoint-down(md) {
+          padding: rem-calc(5px 0);
+        }
 
         &:before {
           content: "";
