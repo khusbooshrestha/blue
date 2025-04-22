@@ -687,11 +687,11 @@
     // }
     .testimonial.slick-slide.slick-center {
 
-      z-index: 30;
       background-color: #0d1b48;
       color: white;
 
       @include media-breakpoint-up(md) {
+        z-index: 30;
         transform: translateY(-99px);
       }
 
