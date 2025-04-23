@@ -275,6 +275,8 @@
 }
 
 .faq {
+    @extend %section-padding;
+    @extend %section-margin;
     .faq-wrap {
         align-items: center;
     }

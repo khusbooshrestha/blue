@@ -1374,6 +1374,7 @@ html.with-fancybox body.hide-scrollbar {
 .header,
 .grievance-form,
 .location-item,
+.faq,
 .company,
 .values .values-grid-wrap,
 .vision-mission,
@@ -1381,16 +1382,23 @@ html.with-fancybox body.hide-scrollbar {
 .commitments .commitments-wrapper,
 .conduct-section,
 .logo-section .container,
-.recruitment-process {
+.recruitment-process,
+.job-listing,
+.sucess-stories,
+.sucess-stories-wrap {
 	padding-inline: .75rem;
 }
 
 .location-item,
+.faq,
 .values,
 .leadership,
 .vision-mission,
 .awards,
-.recruitment-step {
+.recruitment-step,
+.job-listing,
+.sucess-stories,
+.sucess-stories-wrap {
 	margin-bottom: 2.5rem;
 }
 
@@ -3414,51 +3422,59 @@ input.btn.has_width {
 	color: #172554;
 	font-size: 1.25rem;
 	margin-bottom: 1.25rem;
+}.job-listing-wrap {
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	gap: 1.25rem;
+}.job-listing-wrap .job-item {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 100%;
+	flex: 0 0 100%;
+	max-width: 100%;
 }.job-card {
-	max-width: 300px;
 	background: #fff;
-	border-radius: 16px;
-	padding: 1.5rem;
-	box-shadow: 0 4px 20px rgba(0, 0, 0, .05);
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	gap: 1rem;
-}.job-card-header {
+	border-radius: .625rem;
+	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .25);
+	padding: 1.25rem;
+}.job-card .job-card-header {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	gap: .75rem;
-}.company-logo {
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	object-fit: cover;
-}.company-info .company-name {
-	font-weight: 600;
-	color: #1f2937;
-}.company-info .job-type {
-	font-size: .85rem;
-	color: #6b7280;
-}.job-title {
-	font-size: 1.25rem;
+	gap: .625rem;
+	margin-bottom: .9375rem;
+}.job-card .job-card-header .company-logo {
+	width: 34px;
+	height: 34px;
+	border-radius: 50px;
+	overflow: hidden;
+}.job-card .job-card-header .company-info .company-name {
+	color: #172554;
+	font-weight: 500;
+	font-size: .875rem;
+	margin-bottom: .125rem;
+}.job-card .job-card-header .company-info .job-type {
+	color: #172554;
+	font-weight: 400;
+	font-size: .75rem;
+}.job-card .job-title {
 	font-weight: 700;
-	color: #111827;
-}.job-schedule {
-	font-weight: 600;
-	color: #1f2937;
-}.job-description {
-	font-size: .9rem;
-	color: #6b7280;
-	line-height: 1.4;
-}.job-footer {
+	color: #172554;
+	margin-bottom: .75rem;
+	font-size: 18px;
+}.job-card .job-schedule {
+	color: #172554;
+	font-weight: 500;
+	font-size: .875rem;
+	margin-bottom: .75rem;
+}.job-card .job-description {
+	color: #585858;
+	font-weight: 400;
+	font-size: .75rem;
+}.job-card .job-footer {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -3468,23 +3484,24 @@ input.btn.has_width {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	background: #f3f4f6;
-	padding: .75rem 1rem;
-	border-radius: 12px;
-}.salary {
-	font-weight: 600;
-	color: #1f2937;
-}.apply-btn {
-	background-color: #6366f1;
+}.job-card .salary {
+	color: #172554;
+	font-weight: 500;
+	font-size: .875rem;
+}.job-card .apply-btn {
+	background: #f9f9ff;
+	color: #172554;
+	padding: .625rem;
+	border-radius: .3125rem;
+	font-weight: 500;
+	-webkit-transition: .3s all ease;
+	transition: .3s all ease;
+}.job-card .apply-btn:hover {
+	background: #172554;
 	color: #fff;
-	padding: .5rem 1rem;
-	text-decoration: none;
-	border-radius: 8px;
-	font-weight: 600;
-	-webkit-transition: background-color .3s;
-	transition: background-color .3s;
-}.apply-btn:hover {
-	background-color: #4f46e5;
+}.job-more-btn {
+	text-align: center;
+	margin-top: 1.875rem;
 }.sucess-stories-wrap {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -3494,13 +3511,28 @@ input.btn.has_width {
 	justify-content: center;
 	border-radius: 20px;
 	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .25);
-	padding: 1.875rem;
 	gap: 1.25rem;
+	padding: 1.875rem;
 }.sucess-stories-wrap .sucess-item {
 	-webkit-box-flex: 0;
 	-ms-flex: 0 0 100%;
 	flex: 0 0 100%;
 	max-width: 100%;
+}.sucess-item .sucess-header {
+	width: 34px;
+	height: 34px;
+	border-radius: 50px;
+	overflow: hidden;
+	margin-bottom: .9375rem;
+}.sucess-item .sucess-title {
+	font-weight: 700;
+	color: #172554;
+	margin-bottom: .75rem;
+	font-size: 18px;
+}.sucess-item .sucess-description {
+	color: #172554;
+	font-weight: 400;
+	font-size: .75rem;
 }.footer .footer-wrap {
 	background-color: #0d1b48;
 	color: white;
@@ -3599,6 +3631,7 @@ input.btn.has_width {
 	.header,
 	.grievance-form,
 	.location-item,
+	.faq,
 	.company,
 	.values .values-grid-wrap,
 	.vision-mission,
@@ -3606,14 +3639,21 @@ input.btn.has_width {
 	.commitments .commitments-wrapper,
 	.conduct-section,
 	.logo-section .container,
-	.recruitment-process {
+	.recruitment-process,
+	.job-listing,
+	.sucess-stories,
+	.sucess-stories-wrap {
 		padding-inline: 20px;
 	}.location-item,
+	.faq,
 	.values,
 	.leadership,
 	.vision-mission,
 	.awards,
-	.recruitment-step {
+	.recruitment-step,
+	.job-listing,
+	.sucess-stories,
+	.sucess-stories-wrap {
 		margin-bottom: 30px;
 	}.d-md-none {
 		display: none !important;
@@ -4214,6 +4254,40 @@ input.btn.has_width {
 	}.recruitment-step .recruitment-step-title {
 		font-size: 22px;
 		margin-bottom: 30px;
+	}.job-listing-wrap {
+		gap: 20px;
+	}.job-listing-wrap .job-item {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(50% - 20px);
+		flex: 0 0 calc(50% - 20px);
+		max-width: calc(50% - 20px);
+	}.job-card {
+		padding: 20px;
+		border-radius: 20px;
+	}.job-card .job-card-header {
+		margin-bottom: 26px;
+	}.job-card .job-card-header {
+		gap: 15px;
+	}.job-card .job-card-header .company-info .company-name {
+		margin-bottom: 5px;
+		font-size: 16px;
+	}.job-card .job-card-header .company-info .job-type {
+		font-size: 12px;
+	}.job-card .job-title {
+		font-size: 20px;
+		margin-bottom: 15px;
+	}.job-card .job-schedule {
+		margin-bottom: 15px;
+		font-size: 16px;
+	}.job-card .job-description {
+		font-size: 12px;
+	}.job-card .salary {
+		font-size: 16px;
+	}.job-card .apply-btn {
+		padding: 10px;
+		border-radius: 10px;
+	}.job-more-btn {
+		margin-top: 30px;
 	}.sucess-stories-wrap {
 		padding: 30px;
 		gap: 30px;
@@ -4222,6 +4296,13 @@ input.btn.has_width {
 		-ms-flex: 0 0 calc(50% - 15px);
 		flex: 0 0 calc(50% - 15px);
 		max-width: calc(50% - 15px);
+	}.sucess-item .sucess-header {
+		margin-bottom: 26px;
+	}.sucess-item .sucess-title {
+		font-size: 20px;
+		margin-bottom: 15px;
+	}.sucess-item .sucess-description {
+		font-size: 12px;
 	}.footer .footer-wrap {
 		padding: 50px 20px;
 	}.footer .footer-container .footer-logo {
@@ -4262,6 +4343,7 @@ input.btn.has_width {
 	.header,
 	.grievance-form,
 	.location-item,
+	.faq,
 	.company,
 	.values .values-grid-wrap,
 	.vision-mission,
@@ -4269,14 +4351,21 @@ input.btn.has_width {
 	.commitments .commitments-wrapper,
 	.conduct-section,
 	.logo-section .container,
-	.recruitment-process {
+	.recruitment-process,
+	.job-listing,
+	.sucess-stories,
+	.sucess-stories-wrap {
 		padding-inline: 30px;
 	}.location-item,
+	.faq,
 	.values,
 	.leadership,
 	.vision-mission,
 	.awards,
-	.recruitment-step {
+	.recruitment-step,
+	.job-listing,
+	.sucess-stories,
+	.sucess-stories-wrap {
 		margin-bottom: 40px;
 	}.d-lg-none {
 		display: none !important;
@@ -4556,6 +4645,13 @@ input.btn.has_width {
 		max-width: 20%;
 	}.recruitment-step .recruitment-step-title {
 		margin-bottom: 50px;
+	}.job-listing-wrap {
+		gap: 20px;
+	}.job-listing-wrap .job-item {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(25% - 15px);
+		flex: 0 0 calc(25% - 15px);
+		max-width: calc(25% - 15px);
 	}.sucess-stories-wrap {
 		padding: 40px;
 		gap: 40px;
@@ -4577,6 +4673,7 @@ input.btn.has_width {
 	.header,
 	.grievance-form,
 	.location-item,
+	.faq,
 	.company,
 	.values .values-grid-wrap,
 	.vision-mission,
@@ -4584,14 +4681,21 @@ input.btn.has_width {
 	.commitments .commitments-wrapper,
 	.conduct-section,
 	.logo-section .container,
-	.recruitment-process {
+	.recruitment-process,
+	.job-listing,
+	.sucess-stories,
+	.sucess-stories-wrap {
 		padding-inline: 60px;
 	}.location-item,
+	.faq,
 	.values,
 	.leadership,
 	.vision-mission,
 	.awards,
-	.recruitment-step {
+	.recruitment-step,
+	.job-listing,
+	.sucess-stories,
+	.sucess-stories-wrap {
 		margin-bottom: 60px;
 	}.section-title {
 		font-size: 42px;
@@ -4759,6 +4863,13 @@ input.btn.has_width {
 		gap: 90px;
 	}.recruitment-step .recruitment-step-title {
 		margin-bottom: 60px;
+	}.job-listing-wrap {
+		gap: 30px;
+	}.job-listing-wrap .job-item {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(25% - 22.5px);
+		flex: 0 0 calc(25% - 22.5px);
+		max-width: calc(25% - 22.5px);
 	}.sucess-stories-wrap {
 		padding: 40px 60px;
 		gap: 50px;
@@ -4780,6 +4891,7 @@ input.btn.has_width {
 	.header,
 	.grievance-form,
 	.location-item,
+	.faq,
 	.company,
 	.values .values-grid-wrap,
 	.vision-mission,
@@ -4787,14 +4899,21 @@ input.btn.has_width {
 	.commitments .commitments-wrapper,
 	.conduct-section,
 	.logo-section .container,
-	.recruitment-process {
+	.recruitment-process,
+	.job-listing,
+	.sucess-stories,
+	.sucess-stories-wrap {
 		padding-inline: 125px;
 	}.location-item,
+	.faq,
 	.values,
 	.leadership,
 	.vision-mission,
 	.awards,
-	.recruitment-step {
+	.recruitment-step,
+	.job-listing,
+	.sucess-stories,
+	.sucess-stories-wrap {
 		margin-bottom: 100px;
 	}.section-title {
 		font-size: 48px;
