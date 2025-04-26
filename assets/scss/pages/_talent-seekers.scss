@@ -1,13 +1,40 @@
 .talent-seeker-form {
-    background: rgba(#F6F5F3,0.42);
-    padding: rem-calc(30px);
+    @extend %section-padding;
+    @extend %section-margin;
+    padding-top: rem-calc(40px);
+
     @include media-breakpoint-up(md) {
-        padding: 40px 30px;
+        padding-top: 40px;
     }
+
     @include media-breakpoint-up(lg) {
-        padding: 60px 40px;
+        padding-top: 50px;
     }
+
     @include media-breakpoint-up(xl) {
-        padding: 80px 40px;
+        padding-top: 60px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        padding-top: 100px;
+    }
+
+    .wpcf7 {
+        background: rgba(#F6F5F3, 0.42);
+        padding: rem-calc(30px 20px);
+        border-radius: rem-calc(15px);
+
+        @include media-breakpoint-up(md) {
+            border-radius: 27px;
+            padding: 40px 30px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding: 60px 40px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            padding: 80px 40px;
+        }
     }
 }
