@@ -26,26 +26,6 @@
       margin-top: -42px;
     }
   }
-
-  // &+div {
-  //   margin-top: rem-calc(40px);
-
-  //   @include media-breakpoint-up(md) {
-  //     margin-top: 60px;
-  //   }
-
-  //   @include media-breakpoint-up(lg) {
-  //     margin-top: 80px;
-  //   }
-
-  //   @include media-breakpoint-up(xl) {
-  //     margin-top: 100px;
-  //   }
-
-  //   @include media-breakpoint-up(xxl) {
-  //     margin-top: 120px;
-  //   }
-  // }
 }
 
 .header-top__wrap {
@@ -289,8 +269,14 @@
             color: $white;
           }
         }
+        &.current-menu-item {
+          &:before {
+            width: 100%;
+            opacity: 1;
+          }
+        }
       }
-
+      
     }
   }
 }
