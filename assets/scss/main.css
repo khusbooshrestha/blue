@@ -1361,6 +1361,12 @@ html.with-fancybox body.hide-scrollbar {
 	pointer-events: none;
 }
 
+.testimonials .testimonial-slider .slick-dots {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
 .grievance-form,
 .company,
 .values .values-grid-wrap,
@@ -1373,6 +1379,11 @@ html.with-fancybox body.hide-scrollbar {
 .content-section,
 .header,
 .grievance-form,
+.about-section,
+.service-section,
+.feature-section,
+.content-layout .content-layout__wrap,
+.testimonials,
 .talent-seeker-form,
 .location-item,
 .faq,
@@ -2599,10 +2610,6 @@ input.btn.has_width {
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
-}.padding-inline {
-	padding: 0 .75rem;
-}.about-section {
-	padding: 0 .75rem;
 }.about-section .about-section__content {
 	font-size: 1rem;
 }.about-section .btn-wrap {
@@ -2610,8 +2617,6 @@ input.btn.has_width {
 	-webkit-box-pack: start;
 	-ms-flex-pack: start;
 	justify-content: flex-start;
-}.service-section {
-	padding: 0 .75rem;
 }.service-section .section-title {
 	margin-bottom: 1.25rem;
 }.service-section .service-wrap {
@@ -2632,8 +2637,6 @@ input.btn.has_width {
 	color: #8f8f8f;
 }.service-section .service-wrap .service-item .service-content p:last-child {
 	margin-bottom: 0;
-}.feature-section {
-	padding: 0 .75rem;
 }.feature-section .section-title {
 	margin-bottom: 1.25rem;
 }.feature-section .feature-wrap {
@@ -2675,44 +2678,45 @@ input.btn.has_width {
 	max-width: 100%;
 	margin: 20px auto;
 	overflow: hidden;
-}.testimonials .testimonial-slider .slick-initialized .slick-slide {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	height: 100%;
-}.testimonials .testimonial-slider .slick-list {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-}.testimonials .testimonial-slider .slick-arrow {
+}.testimonials .testimonial-slider .slick-dots {
 	position: absolute;
-	top: 50%;
-	width: 40px;
-	height: 50px;
-	line-height: 50px;
-	margin-top: -25px;
+	top: auto;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	font-size: 0;
+	gap: .625rem;
+}.testimonials .testimonial-slider .slick-dots > li {
+	padding: 3px 0 1px;
+	display: block;
+}.testimonials .testimonial-slider .slick-dots .slick-active button {
+	background: #172554;
+}.testimonials .testimonial-slider .slick-dots button {
 	border: none;
-	background: transparent;
-	color: #fff;
-	font-family: monospace;
-	font-size: 5rem;
-	z-index: 300;
 	outline: none;
-}.testimonials .testimonial-slider .slick-prev {
-	left: -50px;
-	text-align: left;
-}.testimonials .testimonial-slider .slick-next {
-	right: -50px;
-	text-align: right;
-}.testimonials .testimonial-slider .testimonial.slick-slide.slick-center {
+	padding: 0;
+	margin: 0;
+	width: .4375rem;
+	height: .4375rem;
+	background: #bababa;
+	border-radius: 25px;
+}.testimonials .testimonial-slider .slick-dots button:hover {
+	background: #172554;
+}.testimonials .testimonial-slider .testimonial-item {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}.testimonials .testimonial-slider .testimonial-item.slick-center .testimonial {
 	z-index: 30;
 	background-color: #0d1b48;
 	color: white;
-}.testimonials .testimonial-slider .testimonial.slick-slide.slick-center .testimonial-head .quote {
+}.testimonials .testimonial-slider .testimonial-item.slick-center .testimonial .testimonial-head .quote {
 	color: rgba(255, 255, 255, .2);
 }.testimonials .testimonial-slider .slick-center:after {
 	opacity: 0;
@@ -3695,6 +3699,11 @@ input.btn.has_width {
 	}.content-section,
 	.header,
 	.grievance-form,
+	.about-section,
+	.service-section,
+	.feature-section,
+	.content-layout .content-layout__wrap,
+	.testimonials,
 	.talent-seeker-form,
 	.location-item,
 	.faq,
@@ -3755,6 +3764,8 @@ input.btn.has_width {
 		font-size: 18px;
 	}.content-section {
 		margin-block: 30px;
+	}.cc-window {
+		gap: 40px;
 	}.header-top__wrap .logo {
 		max-width: 30%;
 		-webkit-box-flex: 0;
@@ -3875,16 +3886,10 @@ input.btn.has_width {
 		margin-top: 30px;
 		-webkit-column-gap: 40px;
 		column-gap: 40px;
-	}.padding-inline {
-		padding: 0 30px;
-	}.about-section {
-		padding: 0 30px;
 	}.about-section .about-section__content {
 		font-size: 18px;
 	}.about-section .btn-wrap {
 		margin-top: 15px;
-	}.service-section {
-		padding: 0 30px;
 	}.service-section .section-title {
 		margin-bottom: 20px;
 	}.service-section .service-wrap {
@@ -3903,8 +3908,6 @@ input.btn.has_width {
 	}.service-section .service-wrap .service-item .service-title {
 		margin-bottom: 25px;
 		font-size: 20px;
-	}.feature-section {
-		padding: 0 30px;
 	}.feature-section .section-title {
 		margin-bottom: 20px;
 	}.feature-section .feature-wrap {
@@ -3929,8 +3932,6 @@ input.btn.has_width {
 		font-size: 16px;
 		margin-inline: auto;
 		max-width: 300px;
-	}.content-layout .content-layout__wrap {
-		padding-left: 40px;
 	}.content-layout .content-layout__wrap .content-layout__info {
 		max-width: 469px;
 		padding-right: 30px;
@@ -3951,32 +3952,25 @@ input.btn.has_width {
 	}.content-layout .content-layout__wrap.flex-row-reverse .content-layout__info {
 		padding-inline: 30px 0;
 		margin-inline: 0 auto;
-	}.testimonials .testimonial-slider .slick-track {
-		padding-block: 99px 20px;
+	}.testimonials .testimonial-slider {
+		padding-bottom: .625rem;
+	}.testimonials .testimonial-slider .slick-list {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
-	}.testimonials .testimonial-slider .testimonial.slick-slide {
-		width: 250px;
+	}.testimonials .testimonial-slider .slick-track {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		padding-block: 99px 20px;
+	}.testimonials .testimonial-slider .testimonial {
 		-webkit-transition: -webkit-transform .4s;
 		transition: -webkit-transform .4s;
 		transition: transform .4s;
 		transition: transform .4s, -webkit-transform .4s;
 		position: relative;
-		margin-inline: 30px;
-	}.testimonials .testimonial-slider .testimonial.slick-slide {
-		-webkit-transform: translateX(200px);
-		-ms-transform: translateX(200px);
-		transform: translateX(200px);
-	}.testimonials .testimonial-slider .testimonial.slick-slide.slick-center + .slick-slide {
-		-webkit-transform: translateX(-200px);
-		-ms-transform: translateX(-200px);
-		transform: translateX(-200px);
-	}.testimonials .testimonial-slider .testimonial.slick-slide.slick-center + .slick-slide + .testimonial.slick-slide {
-		-webkit-transform: translateX(-320px);
-		-ms-transform: translateX(-320px);
-		transform: translateX(-320px);
-	}.testimonials .testimonial-slider .testimonial.slick-slide.slick-center {
+		margin-inline: 20px;
+	}.testimonials .testimonial-slider .testimonial-item.slick-center .testimonial {
 		-webkit-transform: translateY(-99px);
 		-ms-transform: translateY(-99px);
 		transform: translateY(-99px);
@@ -4424,6 +4418,11 @@ input.btn.has_width {
 	}.content-section,
 	.header,
 	.grievance-form,
+	.about-section,
+	.service-section,
+	.feature-section,
+	.content-layout .content-layout__wrap,
+	.testimonials,
 	.talent-seeker-form,
 	.location-item,
 	.faq,
@@ -4554,47 +4553,22 @@ input.btn.has_width {
 	}.hero-banner .banner-title {
 		font-size: 38px;
 		margin-bottom: 18px;
-	}.padding-inline {
-		padding: 0 40px;
-	}.about-section {
-		padding: 0 40px;
 	}.about-section .about-section__content {
 		font-size: 20px;
 	}.about-section .btn-wrap {
 		margin-top: 20px;
-	}.service-section {
-		padding: 0 40px;
 	}.service-section .section-title {
 		margin-bottom: 30px;
 	}.service-section .service-wrap .service-item .service-title {
 		font-size: 22px;
-	}.feature-section {
-		padding: 0 40px;
 	}.feature-section .section-title {
 		margin-bottom: 30px;
 	}.feature-section .feature-wrap .feature-item {
 		padding: 25px;
 	}.feature-section .feature-wrap .feature-item .feature-title {
 		font-size: 20px;
-	}.content-layout .content-layout__wrap {
-		padding-left: 80px;
 	}.content-layout .content-layout__wrap.flex-row-reverse {
 		padding-inline: 0 80px;
-	}.testimonials .testimonial-slider .testimonial.slick-slide {
-		width: 400px;
-		margin-inline: 40px;
-	}.testimonials .testimonial-slider .testimonial.slick-slide {
-		-webkit-transform: translateX(300px);
-		-ms-transform: translateX(300px);
-		transform: translateX(300px);
-	}.testimonials .testimonial-slider .testimonial.slick-slide.slick-center + .slick-slide {
-		-webkit-transform: translateX(-300px);
-		-ms-transform: translateX(-300px);
-		transform: translateX(-300px);
-	}.testimonials .testimonial-slider .testimonial.slick-slide.slick-center + .slick-slide + .testimonial.slick-slide {
-		-webkit-transform: translateX(-300px);
-		-ms-transform: translateX(-300px);
-		transform: translateX(-300px);
 	}.testimonial {
 		padding: 65px 20px 40px;
 	}.testimonial .testimonial-head .quote {
@@ -4756,6 +4730,11 @@ input.btn.has_width {
 	}.content-section,
 	.header,
 	.grievance-form,
+	.about-section,
+	.service-section,
+	.feature-section,
+	.content-layout .content-layout__wrap,
+	.testimonials,
 	.talent-seeker-form,
 	.location-item,
 	.faq,
@@ -4816,24 +4795,14 @@ input.btn.has_width {
 		margin-bottom: 18px;
 	}.hero-banner .btn-wrap {
 		margin-top: 40px;
-	}.padding-inline {
-		padding: 0 60px;
-	}.about-section {
-		padding: 0 60px;
 	}.about-section .btn-wrap {
 		margin-top: 25px;
-	}.service-section {
-		padding: 0 60px;
 	}.service-section .section-title {
 		margin-bottom: 40px;
 	}.service-section .service-wrap {
 		gap: 45px;
-	}.feature-section {
-		padding: 0 60px;
 	}.feature-section .section-title {
 		margin-bottom: 40px;
-	}.content-layout .content-layout__wrap {
-		padding-left: 120px;
 	}.content-layout .content-layout__wrap .content-layout__info .content-layout__title {
 		margin-bottom: 30px;
 	}.content-layout .content-layout__wrap .content-layout__info .text {
@@ -4841,9 +4810,6 @@ input.btn.has_width {
 		margin-bottom: 30px;
 	}.content-layout .content-layout__wrap.flex-row-reverse {
 		padding-inline: 0 120px;
-	}.testimonials .testimonial-slider .testimonial.slick-slide {
-		width: 450px;
-		margin-inline: 50px;
 	}.testimonial {
 		padding: 85px 25px 60px;
 	}.testimonial .testimonial-head .quote {
@@ -4976,6 +4942,11 @@ input.btn.has_width {
 	}.content-section,
 	.header,
 	.grievance-form,
+	.about-section,
+	.service-section,
+	.feature-section,
+	.content-layout .content-layout__wrap,
+	.testimonials,
 	.talent-seeker-form,
 	.location-item,
 	.faq,
@@ -5030,23 +5001,12 @@ input.btn.has_width {
 	}.hero-banner .banner-title {
 		font-size: 48px;
 		margin-bottom: 18px;
-	}.padding-inline {
-		padding: 0 120px;
-	}.about-section {
-		padding: 0 120px;
 	}.about-section .btn-wrap {
 		margin-top: 30px;
-	}.service-section {
-		padding: 0 120px;
 	}.service-section .section-title {
 		margin-bottom: 50px;
-	}.feature-section {
-		padding: 0 120px;
 	}.feature-section .section-title {
 		margin-bottom: 50px;
-	}.testimonials .testimonial-slider .testimonial.slick-slide {
-		width: 500px;
-		margin-inline: 80px;
 	}.stats-section {
 		padding: 71px 120px;
 	}.logo-layout .section-title {
@@ -5120,22 +5080,6 @@ input.btn.has_width {
 		-ms-flex: 0 0 calc(25% - 40px);
 		flex: 0 0 calc(25% - 40px);
 		max-width: calc(25% - 40px);
-	}
-}@media (min-width: 1920px) {
-	.testimonials .testimonial-slider .testimonial.slick-slide {
-		width: 643px;
-	}.testimonials .testimonial-slider .testimonial.slick-slide {
-		-webkit-transform: translateX(400px);
-		-ms-transform: translateX(400px);
-		transform: translateX(400px);
-	}.testimonials .testimonial-slider .testimonial.slick-slide.slick-center + .slick-slide {
-		-webkit-transform: translateX(-400px);
-		-ms-transform: translateX(-400px);
-		transform: translateX(-400px);
-	}.testimonials .testimonial-slider .testimonial.slick-slide.slick-center + .slick-slide + .testimonial.slick-slide {
-		-webkit-transform: translateX(-400px);
-		-ms-transform: translateX(-400px);
-		transform: translateX(-400px);
 	}
 }@media (max-width: 992px) {
 	.values .values-grid {
@@ -5216,8 +5160,6 @@ input.btn.has_width {
 		margin-top: -2.5rem;
 	}.feature-section .feature-wrap .feature-item {
 		border-radius: 1.25rem;
-	}.content-layout .content-layout__wrap {
-		padding-inline: .75rem;
 	}.content-layout .content-layout__wrap .content-layout__info {
 		margin-bottom: 1.25rem;
 	}.stats-section {

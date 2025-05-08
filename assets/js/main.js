@@ -10,9 +10,13 @@
         unlockBody();
       }
     });
+
+
     jQuery("html").on(
       "click touchstart pointerdown MSPointerDown",
       function (event) {
+        const target = jQuery(event.target); // define target
+
         if (
           !target.closest(".nav_control").length &&
           !target.closest(".main-navigation").length
@@ -28,32 +32,40 @@
       }
     );
 
+
     $(".testimonial-slider").slick({
-      slidesToShow: 3,
+      slidesToShow: 3,   // 3 slides on desktop
       slidesToScroll: 1,
-      arrows: true,
+      arrows: false,
       dots: false,
-      centerMode: true,
-      variableWidth: true,
-      infinite: true,
+      centerMode: true,  // No center mode
+      variableWidth: false, // Ensure slides are all the same width
+      infinite: true,     // Infinite loop effect
       focusOnSelect: true,
       cssEase: "linear",
       touchMove: true,
-      prevArrow: '<button class="slick-prev"> < </button>',
-      nextArrow: '<button class="slick-next"> > </button>',
       responsive: [
         {
-          breakpoint: 767,
+          breakpoint: 768,  // For mobile devices (<= 768px)
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 1,   // 1 slide on mobile
             slidesToScroll: 1,
-            infinite: true,
-            centerMode: false,
+            centerMode: false, // Ensure no center mode on mobile
+            dots: true,
+            adaptiveHeight: true,
           }
-        },
-
+        }
       ],
     });
+    
+    
+    
+    const root = document.documentElement;
+    if (jQuery('#wpadminbar').length > 0) {
+      root.style.setProperty('--header-height', (jQuery('#wpadminbar').outerHeight() + jQuery('.header').outerHeight()) + 'px');
+    } else {
+      root.style.setProperty('--header-height', jQuery('.header').outerHeight() + 'px');
+    }
   });
   document.addEventListener("DOMContentLoaded", function () {
     const counters = document.querySelectorAll(".count");
@@ -86,7 +98,10 @@
       { threshold: 0.5 }
     ); // Trigger when 50% of the section is visible
 
-    observer.observe(document.querySelector(".stats-section"));
+    const statsSection = document.querySelector(".stats-section");
+    if (statsSection) {
+      observer.observe(statsSection);
+    }
   });
   // Initialize Masonry after all images load
   window.addEventListener("load", () => {
@@ -95,7 +110,15 @@
       itemSelector: ".grid-item",
       columnWidth: ".grid-item",
       percentPosition: true,
-      gutter: 10,
+      gutter: 0,
     });
+  });
+
+  window.addEventListener('resize', () => {
+    root.style.setProperty('--header-height', jQuery('.header').outerHeight() + 'px');
+  });
+
+  Fancybox.bind("[data-fancybox]", {
+    // your custom options
   });
 })(jQuery);

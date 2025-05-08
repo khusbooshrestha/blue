@@ -243,3 +243,9 @@ body {
     margin-block: 100px;
   }
 }
+
+.cc-window {
+  @include media-breakpoint-up(md) {
+    gap: 40px;
+  }
+}

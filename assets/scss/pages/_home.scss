@@ -139,44 +139,8 @@
   }
 }
 
-.padding-inline {
-  padding: rem-calc(0 12px);
-
-  @include media-breakpoint-up(md) {
-    padding: 0 30px;
-  }
-
-  @include media-breakpoint-up(lg) {
-    padding: 0 40px;
-  }
-
-  @include media-breakpoint-up(xl) {
-    padding: 0 60px;
-  }
-
-  @include media-breakpoint-up(xxl) {
-    padding: 0 120px;
-  }
-}
-
 .about-section {
-  padding: rem-calc(0 12px);
-
-  @include media-breakpoint-up(md) {
-    padding: 0 30px;
-  }
-
-  @include media-breakpoint-up(lg) {
-    padding: 0 40px;
-  }
-
-  @include media-breakpoint-up(xl) {
-    padding: 0 60px;
-  }
-
-  @include media-breakpoint-up(xxl) {
-    padding: 0 120px;
-  }
+  @extend %section-padding;
 
   .about-section__content {
     font-size: rem-calc(16px);
@@ -213,23 +177,7 @@
 }
 
 .service-section {
-  padding: rem-calc(0 12px);
-
-  @include media-breakpoint-up(md) {
-    padding: 0 30px;
-  }
-
-  @include media-breakpoint-up(lg) {
-    padding: 0 40px;
-  }
-
-  @include media-breakpoint-up(xl) {
-    padding: 0 60px;
-  }
-
-  @include media-breakpoint-up(xxl) {
-    padding: 0 120px;
-  }
+  @extend %section-padding;
 
   .section-title {
     margin-bottom: rem-calc(20px);
@@ -317,23 +265,7 @@
 }
 
 .feature-section {
-  padding: rem-calc(0 12px);
-
-  @include media-breakpoint-up(md) {
-    padding: 0 30px;
-  }
-
-  @include media-breakpoint-up(lg) {
-    padding: 0 40px;
-  }
-
-  @include media-breakpoint-up(xl) {
-    padding: 0 60px;
-  }
-
-  @include media-breakpoint-up(xxl) {
-    padding: 0 120px;
-  }
+  @extend %section-padding;
 
   .section-title {
     margin-bottom: rem-calc(20px);
@@ -435,21 +367,7 @@
 
 .content-layout {
   .content-layout__wrap {
-    @include media-breakpoint-down(sm) {
-      padding-inline: rem-calc(12px);
-    }
-
-    @include media-breakpoint-up(md) {
-      padding-left: 40px;
-    }
-
-    @include media-breakpoint-up(lg) {
-      padding-left: 80px;
-    }
-
-    @include media-breakpoint-up(xl) {
-      padding-left: 120px;
-    }
+    @extend %section-padding;
 
     .content-layout__info {
       @include media-breakpoint-down(sm) {
@@ -540,163 +458,89 @@
 }
 
 .testimonials {
-
+  @extend %section-padding;
   .testimonial-slider {
     max-width: 100%;
     margin: 20px auto;
     overflow: hidden;
-
-    .slick-initialized {
-      .slick-slide {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-      }
+    @include media-breakpoint-up(md) {
+      padding-bottom: rem-calc(10px);
     }
 
     .slick-list {
-      display: flex;
-    }
-
-    .slick-track {
-
-      // padding-top: 99px !important;
       @include media-breakpoint-up(md) {
-        padding-block: 99px 20px;
         display: flex;
       }
     }
 
-    .slick-arrow {
+    .slick-track {
+      @include media-breakpoint-up(md) {
+        display: flex;
+        padding-block: 99px 20px;
+        
+      }
+    }
+    .slick-dots {
+      @extend %listreset;
       position: absolute;
-      top: 50%;
-      width: 40px;
-      height: 50px;
-      line-height: 50px;
-      margin-top: -25px;
-      border: none;
-      background: transparent;
-      color: #fff;
-      font-family: monospace;
-      font-size: 5rem;
-      z-index: 300;
-      outline: none;
-    }
+      top: auto;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      font-size: 0;
+      gap: rem-calc(10px);
+      >li {
+        padding: 3px 0 1px;
+        display: block;
+      }
 
-    .slick-prev {
-      left: -50px;
-      text-align: left;
-    }
+      .slick-active {
+        button {
+          background: $theme-primary-color;
+        }
+      }
 
-    .slick-next {
-      right: -50px;
-      text-align: right;
-    }
+      button {
+        border: none;
+        outline: none;
+        padding: 0;
+        margin: 0;
+        width: rem-calc(7px);
+        height: rem-calc(7px);
+        background: #bababa;
+        border-radius: 25px;
 
+        &:hover {
+          background: $theme-primary-color;
+        }
+      }
+    }
     .testimonial {
-      &.slick-slide {
-        @include media-breakpoint-up(md) {
-          width: 250px;
+      @include media-breakpoint-up(md) {
           transition: transform .4s;
           position: relative;
-          margin-inline: 30px;
-        }
-
-        @include media-breakpoint-up(lg) {
-          width: 400px;
-          margin-inline: 40px;
-        }
-
-        @include media-breakpoint-up(xl) {
-          width: 450px;
-          margin-inline: 50px;
-        }
-
-        @include media-breakpoint-up(xxl) {
-          width: 500px;
-          margin-inline: 80px;
-        }
-
-        @include media-breakpoint-up(wxl) {
-          width: 643px;
-        }
+          margin-inline: 20px;
       }
     }
-
-    .testimonial.slick-slide {
-      @include media-breakpoint-up(md) {
-        transform: translateX(200px);
-      }
-
-      @include media-breakpoint-up(lg) {
-        transform: translateX(300px);
-      }
-
-      @include media-breakpoint-up(wxl) {
-        transform: translateX(400px);
-      }
-    }
-
-    .testimonial.slick-slide.slick-center+.slick-slide {
-      @include media-breakpoint-up(md) {
-        transform: translateX(-200px);
-      }
-
-      @include media-breakpoint-up(lg) {
-        transform: translateX(-300px);
-      }
-
-      @include media-breakpoint-up(wxl) {
-        transform: translateX(-400px);
-      }
-    }
-
-    .testimonial.slick-slide.slick-center+.slick-slide+.testimonial.slick-slide {
-      @include media-breakpoint-up(md) {
-        transform: translateX(-320px);
-      }
-
-      @include media-breakpoint-up(lg) {
-        transform: translateX(-300px);
-      }
-
-      @include media-breakpoint-up(wxl) {
-        transform: translateX(-400px);
-      }
-    }
-
-    // .testimonial.slick-slide {
-    //   transform: translateX(250px);
-    //   transition: transform 0.3s ease;
-    // }
-
-    // /* Center slide stays in place */
-    // .testimonial.slick-slide.slick-center {
-    //   transform: translateX(0);
-    // }
-
-    // /* Slide immediately after the center */
-    // .testimonial.slick-slide.slick-center + .slick-slide {
-    //   transform: translateX(-250px);
-    // }
-
-    // /* Slide two steps after center */
-    // .testimonial.slick-slide.slick-center + .slick-slide + .slick-slide {
-    //   transform: translateX(-500px);
-    // }
-    .testimonial.slick-slide.slick-center {
-
-      z-index: 30;
-      background-color: #0d1b48;
-      color: white;
-
-      @include media-breakpoint-up(md) {
-        transform: translateY(-99px);
-      }
-
-      .testimonial-head {
-        .quote {
-          color: rgba($white, 0.2);
+    .testimonial-item {
+      display: flex;
+      &.slick-center {
+        .testimonial {
+          z-index: 30;
+          background-color: #0d1b48;
+          color: white;
+  
+          @include media-breakpoint-up(md) {
+            transform: translateY(-99px);
+          }
+  
+          .testimonial-head {
+            .quote {
+              color: rgba($white, 0.2);
+            }
+          }
         }
       }
     }
