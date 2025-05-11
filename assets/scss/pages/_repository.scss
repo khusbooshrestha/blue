@@ -1,18 +1,26 @@
 .repository-level1-wrap {
     justify-content: center;
     gap: rem-calc(40px);
-
+    margin-top: rem-calc(40px);
+    align-items: center;
     @include media-breakpoint-up(md) {
+        margin-top: 30px;
         gap: 60px;
     }
 
     @include media-breakpoint-up(lg) {
         gap: 80px;
+        margin-top: 40px;
     }
 
     @include media-breakpoint-up(xl) {
         gap: 90px;
-    }
+		margin-top: 60px;
+	}
+
+	@include media-breakpoint-up(xxl) {
+		margin-top: 100px;
+	}
 
     .repository-level1-item {
         @include media-breakpoint-down(sm) {

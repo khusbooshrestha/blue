@@ -2392,11 +2392,67 @@ input.btn.has_width {
 }.btn-text:hover {
 	color: #172554;
 	text-underline-offset: 6px;
-}.radio-group .custom-radio {
+}.custom-radio .custom-radio-item {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	gap: 15px;
+}.custom-radio .custom-radio-item input {
+	display: none;
+}.custom-radio .custom-radio-item input[type="radio"]:checked ~ label.option:after {
+	display: block;
+}.custom-radio .custom-radio-item label.option {
+	padding-right: 1.25rem;
+}.custom-radio .custom-radio-item label.option:before {
+	position: absolute;
+	right: 0;
+	content: "";
+	top: .75rem;
+	-webkit-transform: translate(0, -50%);
+	-ms-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	border: 1px solid #172554;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	font: .375rem / 1 "icomoon";
+	color: #fff;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50px;
+	background: #fff;
+}.custom-radio .custom-radio-item label.option:after {
+	position: absolute;
+	right: .1875rem;
+	content: "";
+	top: .75rem;
+	-webkit-transform: translate(0, -50%);
+	-ms-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	background: #172554;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	font: .375rem / 1 "icomoon";
+	color: #fff;
+	width: .625rem;
+	height: .625rem;
+	border-radius: 50px;
+	display: none;
+}.custom-radio {
+	color: #000;
 }.custom-radio .wpcf7-list-item {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -2407,6 +2463,7 @@ input.btn.has_width {
 	font-size: 16px;
 	cursor: pointer;
 	position: relative;
+	margin: 0;
 }.custom-radio .wpcf7-list-item input {
 	display: none; /* Hide default radio button */
 }.custom-radio .wpcf7-list-item input :checked + .radio-check::after {
@@ -2431,11 +2488,13 @@ input.btn.has_width {
 	margin-right: 8px;
 	-webkit-transition: all .3s ease;
 	transition: all .3s ease;
+}.custom-radio .wpcf7-list-item .wpcf7-list-item-label {
+	padding-right: 1.25rem;
 }.custom-radio .wpcf7-list-item .wpcf7-list-item-label:before {
 	position: absolute;
 	right: 0;
 	content: "";
-	top: .625rem;
+	top: .75rem;
 	-webkit-transform: translate(0, -50%);
 	-ms-transform: translate(0, -50%);
 	transform: translate(0, -50%);
@@ -2451,15 +2510,15 @@ input.btn.has_width {
 	justify-content: center;
 	font: .375rem / 1 "icomoon";
 	color: #fff;
-	width: .8rem;
-	height: .8rem;
+	width: 1rem;
+	height: 1rem;
 	border-radius: 50px;
 	background: #fff;
 }.custom-radio .wpcf7-list-item .wpcf7-list-item-label:after {
 	position: absolute;
-	right: 0;
+	right: .1875rem;
 	content: "";
-	top: .625rem;
+	top: .75rem;
 	-webkit-transform: translate(0, -50%);
 	-ms-transform: translate(0, -50%);
 	transform: translate(0, -50%);
@@ -2475,8 +2534,8 @@ input.btn.has_width {
 	justify-content: center;
 	font: .375rem / 1 "icomoon";
 	color: #fff;
-	width: 10px;
-	height: 10px;
+	width: .625rem;
+	height: .625rem;
 	border-radius: 50px;
 	display: none;
 }.custom-radio .wpcf7-list-item input[type="radio"]:checked ~ .wpcf7-list-item-label:after {
@@ -2492,6 +2551,8 @@ input.btn.has_width {
 	display: block;
 }.form-radio-group .radio-group .wpcf7-list-item {
 	margin: 0;
+}.form-radio-input {
+	margin-top: .625rem;
 }.form-row {
 	width: 100%;
 }.form-control {
@@ -2520,6 +2581,9 @@ input.btn.has_width {
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
 	flex-direction: column;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
 }.option {
 	text-align: center;
 	font-weight: bold;
@@ -2549,6 +2613,8 @@ input.btn.has_width {
 	color: #172554;
 	margin-bottom: 1.875rem;
 	font-size: 1.25rem;
+}.grievance-form .grievance-form-wrap .grievance-title span {
+	display: block;
 }.hero-banner,
 .about-section,
 .stats-section,
@@ -2861,7 +2927,7 @@ input.btn.has_width {
 	left: 0;
 	right: auto;
 }.contact-form .form-radio-group .custom-radio .wpcf7-list-item .wpcf7-list-item-label:after {
-	left: 2px;
+	left: 3px;
 	right: auto;
 }.contact-form .wpcf7 form.invalid .wpcf7-response-output,
 .contact-form .wpcf7 form.unaccepted .wpcf7-response-output,
@@ -2951,13 +3017,16 @@ input.btn.has_width {
 	font-size: 1.125rem;
 	font-weight: 700;
 	margin-bottom: 1.25rem;
-}.accordion-item:first-of-type {
-	border: 0;
-}.accordion-item .accordion-button {
+}.faq .accordion-item .accordion-button {
+	background: #fff;
 	font-weight: 500;
 	font-size: 1rem;
-}.accordion-item .accordion-button:not(.collapsed) {
+}.faq .accordion-item .accordion-button:not(.collapsed) {
 	color: #172554;
+	background: #fafbff;
+	box-shadow: none;
+}.faq .accordion-body {
+	background: #fafbff;
 }.page-template-default h1 {
 	font-size: 1.375rem;
 	font-weight: 700;
@@ -3460,6 +3529,10 @@ input.btn.has_width {
 	-ms-flex-pack: center;
 	justify-content: center;
 	gap: 2.5rem;
+	margin-top: 2.5rem;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
 }.repository-level2-wrap {
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
@@ -3602,6 +3675,8 @@ input.btn.has_width {
 	justify-content: space-between;
 	max-width: 1200px;
 	margin: auto;
+}.footer .footer-container .footer-left a:hover {
+	color: #006498;
 }.footer .footer-container .footer-logo {
 	-webkit-box-flex: 1;
 	-ms-flex: 1;
@@ -3636,8 +3711,9 @@ input.btn.has_width {
 	-webkit-transition: .3s;
 	transition: .3s;
 }.footer .footer-container .footer-contact .social-icons a:hover {
-	color: #f8c200;
+	color: #006498;
 }.footer .footer-container .footer-links h3 {
+	color: #fff;
 	font-weight: 700;
 	font-size: rem-calc 16px;
 	margin-bottom: .9375rem;
@@ -3657,7 +3733,7 @@ input.btn.has_width {
 	transition: .3s;
 }.footer .footer-container .footer-links ul li a:hover,
 .footer .footer-container .footer-links .footer-menu li a:hover {
-	color: #f8c200;
+	color: #006498;
 }.footer .footer-bottom {
 	text-align: center;
 	padding-top: 1.25rem;
@@ -3812,23 +3888,41 @@ input.btn.has_width {
 		left: 2px;
 	}.btn-link:has(.btn-icon):hover .btn-icon {
 		left: 5px;
-	}.radio-group .custom-radio {
+	}.custom-radio .custom-radio-item {
 		-webkit-box-align: center;
 		-ms-flex-align: center;
 		align-items: center;
 		gap: 30px;
+	}.custom-radio .custom-radio-item label.option {
+		padding-right: 25px;
+	}.custom-radio .custom-radio-item label.option:before {
+		width: 18px;
+		height: 18px;
+		top: 12px;
+	}.custom-radio .custom-radio-item label.option:after {
+		right: 4px;
+		top: 12px;
+		width: 10px;
+		height: 10px;
+	}.custom-radio .wpcf7-list-item .wpcf7-list-item-label {
+		padding-right: 25px;
 	}.custom-radio .wpcf7-list-item .wpcf7-list-item-label:before {
 		width: 18px;
 		height: 18px;
 		top: 12px;
 	}.custom-radio .wpcf7-list-item .wpcf7-list-item-label:after {
+		right: 4px;
 		top: 12px;
+		width: 10px;
+		height: 10px;
 	}.form-group {
 		margin-bottom: 30px;
 	}.form-radio-group .form-label {
 		margin-bottom: 20px;
 	}.form-radio-group .radio-group label .wpcf7-list-item-label {
 		margin-left: 5px;
+	}.form-radio-input {
+		margin-top: 10px;
 	}.form-row {
 		display: -webkit-box;
 		display: -ms-flexbox;
@@ -4076,7 +4170,7 @@ input.btn.has_width {
 	}.faq .tab-content h2 {
 		font-size: 20px;
 		margin-bottom: 20px;
-	}.accordion-item .accordion-button {
+	}.faq .accordion-item .accordion-button {
 		font-size: 16px;
 	}.page-template-default .woocommerce-breadcrumb {
 		padding-top: 20px;
@@ -4305,6 +4399,7 @@ input.btn.has_width {
 	}.fancybox__container .fancybox__content iframe {
 		border-radius: 10px;
 	}.repository-level1-wrap {
+		margin-top: 30px;
 		gap: 60px;
 	}.repository-level2-wrap {
 		-webkit-column-gap: 20px;
@@ -4691,6 +4786,7 @@ input.btn.has_width {
 		width: 16.667%;
 	}.repository-level1-wrap {
 		gap: 80px;
+		margin-top: 40px;
 	}.repository-level2-wrap .repository-level1-item {
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 25%;
@@ -4913,6 +5009,7 @@ input.btn.has_width {
 		right: -40px;
 	}.repository-level1-wrap {
 		gap: 90px;
+		margin-top: 60px;
 	}.recruitment-step .recruitment-step-title {
 		margin-bottom: 60px;
 	}.job-listing-wrap {
@@ -5072,6 +5169,8 @@ input.btn.has_width {
 		right: -22.5px;
 	}.vdo-slider-section .vdo-slider {
 		width: 12.5%;
+	}.repository-level1-wrap {
+		margin-top: 100px;
 	}.sucess-stories-wrap {
 		padding: 40px 70px;
 		gap: 80px;
@@ -5096,7 +5195,7 @@ input.btn.has_width {
 		display: none;
 	}.header-navigation .main-navigation {
 		position: fixed;
-		top: 118px;
+		top: var(--header-height);
 		left: 0;
 		width: 275px;
 		bottom: 0;
@@ -5143,9 +5242,7 @@ input.btn.has_width {
 }@media (max-width: 767.98px) {
 	.header-top__wrap .header-button__wrap {
 		padding-top: .625rem;
-	}.header-navigation .main-navigation {
-		top: 6.60625rem;
-	}.radio-group .custom-radio {
+	}.custom-radio .custom-radio-item {
 		width: 100%;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;

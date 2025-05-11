@@ -200,7 +200,7 @@
 
     @include media-breakpoint-down(md) {
       position: fixed;
-      top: 118px;
+      top: var(--header-height);
       left: 0;
       width: 275px;
       bottom: 0;
@@ -216,10 +216,6 @@
         visibility: visible;
         transform: translate(0, 0);
       }
-    }
-
-    @include media-breakpoint-down(sm) {
-      top: rem-calc(105.7px);
     }
 
     .menu {

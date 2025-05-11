@@ -19,7 +19,13 @@
         @include media-breakpoint-down(sm) {
             gap: rem-calc(30px);
         }
-
+        .footer-left {
+            a {
+                &:hover {
+                    color: $theme-secondary-color;
+                }
+            }
+        }
         .footer-logo {
             flex: 1;
             min-width: rem-calc(250px);
@@ -74,7 +80,7 @@
                     transition: 0.3s;
 
                     &:hover {
-                        color: #f8c200;
+                        color: $theme-secondary-color;
                     }
                 }
             }
@@ -83,6 +89,7 @@
         .footer-links {
 
             h3 {
+                color: $white;
                 font-weight: 700;
                 font-size: rem-calc (16px);
                 margin-bottom: rem-calc(15px);
@@ -108,7 +115,7 @@
                         transition: 0.3s;
 
                         &:hover {
-                            color: #f8c200;
+                            color: $theme-secondary-color;
                         }
                     }
                 }
