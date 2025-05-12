@@ -2542,6 +2542,7 @@ input.btn.has_width {
 }.custom-radio .wpcf7-list-item input[type="radio"]:checked ~ .wpcf7-list-item-label:after {
 	display: block;
 }.form-group {
+	color: #000;
 	margin-bottom: 1rem;
 }.form-group .form-label {
 	width: 100%;

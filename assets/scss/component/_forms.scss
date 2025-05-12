@@ -182,6 +182,7 @@
 }
 
 .form-group {
+    color: $black;
     margin-bottom: rem-calc(16px);
 
     @include media-breakpoint-up(md) {
