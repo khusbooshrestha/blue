@@ -1,33 +1,21 @@
 (function ($) {
   $(document).ready(function () {
-    jQuery("html").on("click", ".nav_control", function (event) {
+    $("html").on("click", ".nav_control", function (event) {
       event.preventDefault();
-      jQuery("body").toggleClass("nav-active");
-
-      if (jQuery("body").hasClass("nav-active")) {
-        lockBody();
-      } else {
-        unlockBody();
-      }
+      $("body").toggleClass("nav-active");
     });
 
 
-    jQuery("html").on(
+    $("html").on(
       "click touchstart pointerdown MSPointerDown",
       function (event) {
-        const target = jQuery(event.target); // define target
+        const target = $(event.target); // define target
 
         if (
           !target.closest(".nav_control").length &&
           !target.closest(".main-navigation").length
         ) {
-          if (
-            document.body.classList.contains("body-locked") &&
-            document.body.classList.contains("nav-active")
-          ) {
-            unlockBody();
-          }
-          jQuery("body").removeClass("nav-active");
+          $("body").removeClass("nav-active");
         }
       }
     );
@@ -44,7 +32,18 @@
       focusOnSelect: true,
       cssEase: "linear",
       touchMove: true,
+      centerPadding: '0',
       responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,   // 1 slide on mobile
+            slidesToScroll: 2,
+            centerMode: false, // Ensure no center mode on mobile
+            dots: true,
+            adaptiveHeight: true,
+          }
+        },
         {
           breakpoint: 768,  // For mobile devices (<= 768px)
           settings: {
@@ -61,10 +60,10 @@
     
     
     const root = document.documentElement;
-    if (jQuery('#wpadminbar').length > 0) {
-      root.style.setProperty('--header-height', (jQuery('#wpadminbar').outerHeight() + jQuery('.header').outerHeight()) + 'px');
+    if ($('#wpadminbar').length > 0) {
+      root.style.setProperty('--header-height', ($('#wpadminbar').outerHeight() + $('.header').outerHeight()) + 'px');
     } else {
-      root.style.setProperty('--header-height', jQuery('.header').outerHeight() + 'px');
+      root.style.setProperty('--header-height', $('.header').outerHeight() + 'px');
     }
   });
   document.addEventListener("DOMContentLoaded", function () {
@@ -115,7 +114,7 @@
   });
 
   window.addEventListener('resize', () => {
-    root.style.setProperty('--header-height', jQuery('.header').outerHeight() + 'px');
+    root.style.setProperty('--header-height', $('.header').outerHeight() + 'px');
   });
 
   Fancybox.bind("[data-fancybox]", {
