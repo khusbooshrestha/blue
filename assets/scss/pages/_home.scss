@@ -368,7 +368,9 @@
 .content-layout {
   .content-layout__wrap {
     @extend %section-padding;
-
+    @include media-breakpoint-up(md) {
+      align-items: center;
+    }
     .content-layout__info {
       @include media-breakpoint-down(sm) {
         margin-bottom: rem-calc(20px);

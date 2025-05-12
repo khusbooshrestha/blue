@@ -28,6 +28,13 @@
                 max-width: 60%;
                 flex: 0 0 60%;
             }
+            .custom-radio {
+                display: flex;
+                gap: rem-calc(15px);
+                @include media-breakpoint-up(md) {
+                    gap: 20px;
+                }
+            }
         }
 
         .contact-info {

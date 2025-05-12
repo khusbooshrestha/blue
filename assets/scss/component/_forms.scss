@@ -21,6 +21,7 @@
             display: block;
         }
         label.option {
+            position: relative;
             padding-right: 1.25rem;
             @include media-breakpoint-up(md) {
                 padding-right: 25px;
@@ -255,6 +256,10 @@
     @include media-breakpoint-up(md) {
         padding: 10px;
     }
+    &:focus {
+        box-shadow: none;
+        border-color: $black;
+    }
 }
 
 input[type="textarea"].form-control {
@@ -304,7 +309,6 @@ input[type="textarea"].form-control {
 }
 
 .option {
-    text-align: center;
     font-weight: bold;
     font-size: 14px;
     display: flex;
