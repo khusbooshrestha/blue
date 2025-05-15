@@ -2565,6 +2565,12 @@ input.btn.has_width {
 }.form-control:focus {
 	box-shadow: none;
 	border-color: #000;
+}.form-control-border {
+	border: 1px dotted #000;
+	border-width: 0 0 1px 0;
+	border-radius: 0;
+	padding-inline: 0;
+	padding-block: .3125rem;
 }input[type="textarea"].form-control {
 	min-height: 150px;
 }.form-label {
@@ -3944,6 +3950,8 @@ input.btn.has_width {
 		margin-bottom: 0;
 	}.form-control {
 		padding: 10px;
+	}.form-control-border {
+		padding: 5px 0;
 	}.form-label {
 		font-size: 16px;
 		margin-bottom: 15px;
@@ -4326,7 +4334,10 @@ input.btn.has_width {
 		height: 100%;
 		background: #fff;
 	}.commitments .commitments-wrapper .commitment-item {
-		width: calc(50% - 20px);
+		max-width: calc(50% - 10px);
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(50% - 10px);
+		flex: 0 0 calc(50% - 10px);
 		padding: 30px;
 		font-size: 16px;
 		line-height: 1.6;
