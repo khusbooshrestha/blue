@@ -2050,7 +2050,7 @@ legend {
 	font-family: "Be Vietnam Pro", sans-serif;
 	color: #172554;
 	font-weight: 700;
-	font-size: 2rem;
+	font-size: 1.75rem;
 	line-height: 1.1;
 	margin-block: 0 .9375rem;
 }.section-header {
@@ -2768,7 +2768,7 @@ input.btn.has_width {
 	margin-bottom: 1.25rem;
 }.content-layout .content-layout__wrap .content-layout__info .text {
 	color: #172554;
-	font-size: 1.125rem;
+	font-size: 1rem;
 	margin-bottom: 1.25rem;
 }.content-layout .content-layout__wrap .content-layout__info .text p:last-child {
 	margin-bottom: 0;
@@ -3782,8 +3782,10 @@ input.btn.has_width {
 .footer .footer-container .footer-links .footer-menu li a:hover {
 	color: #006498;
 }.footer .footer-bottom {
+	background-color: rgba(0, 100, 152, .13);
 	text-align: center;
-	padding-top: 1.25rem;
+	padding-block: .9375rem;
+	font-size: .875rem;
 }.footer .footer-bottom a {
 	color: rgba(255, 255, 255, .7);
 	text-decoration: none;
@@ -4541,7 +4543,7 @@ input.btn.has_width {
 		font-size: 24px;
 		margin-bottom: 30px;
 	}.footer .footer-bottom {
-		padding-top: 20px;
+		padding-block: 20px;
 		font-size: 14px;
 	}.footer .social-icons {
 		font-size: 30px;

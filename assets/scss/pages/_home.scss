@@ -402,7 +402,7 @@
 
       .text {
         color: $theme-primary-color;
-        font-size: rem-calc(18px);
+        font-size: rem-calc(16px);
         margin-bottom: rem-calc(20px);
 
         @include media-breakpoint-up(md) {
