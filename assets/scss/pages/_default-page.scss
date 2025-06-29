@@ -9,59 +9,7 @@
     }
 
     h1 {
-        font-size: rem-calc(22px);
-        font-weight: 700;
-        color: $theme-primary-color;
-        margin: rem-calc(20px) 0;
-
-        @include media-breakpoint-up(md) {
-            font-size: 30px;
-            margin: 20px 0;
-        }
-
-        @include media-breakpoint-up(lg) {
-            font-size: 36px;
-            margin: 25px 0;
-        }
-
-        @include media-breakpoint-up(xl) {
-            font-size: 42px;
-            margin: 30px 0;
-        }
-
-        @include media-breakpoint-up(xxl) {
-            font-size: 48px;
-        }
-    }
-
-    h2 {
-        font-size: rem-calc(18px);
-        font-weight: 700;
-        color: $theme-primary-color;
-        margin: rem-calc(20px) 0;
-
-        @include media-breakpoint-up(md) {
-            font-size: 22px;
-            margin: 20px 0;
-        }
-
-        @include media-breakpoint-up(lg) {
-            font-size: 26px;
-            margin: 25px 0;
-        }
-
-        @include media-breakpoint-up(xl) {
-            font-size: 32px;
-            margin: 30px 0;
-        }
-
-        @include media-breakpoint-up(xxl) {
-            font-size: 38px;
-        }
-    }
-
-    h3 {
-        font-size: rem-calc(16px);
+        font-size: rem-calc(20px);
         font-weight: 700;
         color: $theme-primary-color;
         margin: rem-calc(15px) 0;
@@ -72,17 +20,66 @@
         }
 
         @include media-breakpoint-up(lg) {
-            font-size: 24px;
+            font-size: 26px;
             margin: 20px 0;
         }
 
         @include media-breakpoint-up(xl) {
-            font-size: 26px;
-            margin: 25px 0;
+            font-size: 32px;
         }
 
         @include media-breakpoint-up(xxl) {
-            font-size: 32px;
+            font-size: 38px;
+        }
+    }
+
+    h2 {
+        font-size: rem-calc(18px);
+        font-weight: 700;
+        color: $theme-primary-color;
+        margin: rem-calc(15px) 0;
+
+        @include media-breakpoint-up(md) {
+            font-size: 18px;
+            margin: 25px 0;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: 22px;
+            margin: 20px 0;
+        }
+
+        @include media-breakpoint-up(xl) {
+            font-size: 24px;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            font-size: 28px;
+        }
+    }
+
+    h3 {
+        font-size: rem-calc(16px);
+        font-weight: 700;
+        color: $theme-primary-color;
+        margin: rem-calc(10px) 0;
+
+        @include media-breakpoint-up(md) {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: 20px;
+            margin: 15px 0;
+        }
+
+        @include media-breakpoint-up(xl) {
+            font-size: 22px;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            font-size: 24px;
         }
     }
 
@@ -92,25 +89,24 @@
         font-size: rem-calc(14px);
         font-weight: 700;
         color: $theme-primary-color;
-        margin: rem-calc(15px) 0;
+        margin: rem-calc(10px) 0;
 
         @include media-breakpoint-up(md) {
-            font-size: 18px;
-            margin: 20px 0;
+            font-size: 14px;
+            margin: 10px 0;
         }
 
         @include media-breakpoint-up(lg) {
-            font-size: 20px;
-            margin: 25px 0;
+            font-size: 18px;
+            margin: 15px 0;
         }
 
         @include media-breakpoint-up(xl) {
-            font-size: 22px;
-            margin: 30px 0;
+            font-size: 20px;
         }
 
         @include media-breakpoint-up(xxl) {
-            font-size: 24px;
+            font-size: 22px;
         }
     }
 
@@ -127,16 +123,10 @@
 
         @include media-breakpoint-up(lg) {
             font-size: 16px;
-            margin: 0 0 20px;
         }
 
         @include media-breakpoint-up(xl) {
-            font-size: 18px;
-            margin: 0 0 25px;
-        }
-
-        @include media-breakpoint-up(xxl) {
-            margin: 0 0 30px;
+            margin: 0 0 20px;
         }
 
         +h1,

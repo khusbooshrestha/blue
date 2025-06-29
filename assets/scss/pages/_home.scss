@@ -137,6 +137,10 @@
       margin-top: 40px;
     }
   }
+
+  .slick-dots {
+    bottom: rem-calc(30px)
+  }
 }
 
 .about-section {
@@ -368,9 +372,11 @@
 .content-layout {
   .content-layout__wrap {
     @extend %section-padding;
+
     @include media-breakpoint-up(md) {
       align-items: center;
     }
+
     .content-layout__info {
       @include media-breakpoint-down(sm) {
         margin-bottom: rem-calc(20px);
@@ -461,10 +467,12 @@
 
 .testimonials {
   @extend %section-padding;
+
   .testimonial-slider {
     max-width: 100%;
     margin: 20px auto;
     overflow: hidden;
+
     @include media-breakpoint-down(md) {
       padding-bottom: rem-calc(15px);
     }
@@ -479,9 +487,10 @@
       @include media-breakpoint-up(md) {
         display: flex;
         padding-block: 99px 20px;
-        
+
       }
     }
+
     .slick-dots {
       @extend %listreset;
       position: absolute;
@@ -493,6 +502,7 @@
       justify-content: center;
       font-size: 0;
       gap: rem-calc(10px);
+
       >li {
         padding: 3px 0 1px;
         display: block;
@@ -519,28 +529,32 @@
         }
       }
     }
+
     .testimonial {
       @include media-breakpoint-down(sm) {
         margin: rem-calc(10px);
       }
+
       @include media-breakpoint-up(md) {
-          transition: transform .4s;
-          position: relative;
-          margin-inline: 20px;
+        transition: transform .4s;
+        position: relative;
+        margin-inline: 20px;
       }
     }
+
     .testimonial-item {
       display: flex;
+
       &.slick-center {
         .testimonial {
           z-index: 30;
           background-color: #0d1b48;
           color: white;
-  
+
           @include media-breakpoint-up(md) {
             transform: translateY(-99px);
           }
-  
+
           .testimonial-head {
             .quote {
               color: rgba($white, 0.2);
@@ -713,6 +727,9 @@
     @include media-breakpoint-up(xxl) {
       margin-bottom: 50px;
     }
+  }
+  .slick-dots {
+    bottom: rem-calc(-30px);
   }
 }
 
