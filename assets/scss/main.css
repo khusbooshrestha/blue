@@ -1380,6 +1380,8 @@ html.with-fancybox body.hide-scrollbar {
 .content-section,
 .header,
 .grievance-form,
+.hero-banner.text-left .container,
+.hero-banner.text-right .container,
 .about-section,
 .service-section,
 .feature-section,
@@ -1980,10 +1982,11 @@ legend {
 	height: 1px;
 	overflow: hidden;
 }body {
-	font-family: "Be Vietnam Pro", sans-serif;
-	font-weight: 500;
+	font-family: "Inter", sans-serif;
+	font-weight: 300;
 	margin: 0;
-	color: #172554;
+	color: #000;
+	font-size: 1rem;
 }.btn-wrap {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -2047,10 +2050,10 @@ legend {
 	opacity: 1;
 	visibility: visible;
 }.section-title {
-	font-family: "Be Vietnam Pro", sans-serif;
-	color: #172554;
-	font-weight: 700;
-	font-size: 1.75rem;
+	font-family: "Poppins", sans-serif;
+	color: #000;
+	font-weight: 500;
+	font-size: 1.375rem;
 	line-height: 1.1;
 	margin-block: 0 .9375rem;
 }.section-header {
@@ -2060,7 +2063,7 @@ legend {
 }.section-header .section-subtitle {
 	font-family: "Inter", sans-serif;
 	font-size: 1.125rem;
-	color: #717171;
+	color: #4b535d;
 	margin-bottom: 0;
 }.content-section {
 	margin-block: 2.5rem;
@@ -2230,6 +2233,7 @@ legend {
 a.btn,
 input.btn {
 	font-family: "Inter", sans-serif;
+	font-weight: 300;
 	-webkit-transition: .2s linear color, .2s linear background, .2s linear border;
 	transition: .2s linear color, .2s linear background, .2s linear border;
 	outline: none;
@@ -2244,6 +2248,7 @@ input.btn {
 	display: inline-block;
 	border-radius: 0;
 	text-transform: capitalize;
+	border-radius: .3125rem;
 }button.btn:focus,
 button.btn:active,
 button.btn:visited,
@@ -2689,14 +2694,14 @@ input.btn.has_width {
 	text-align: center;
 	color: #fff;
 }.hero-banner .banner-title {
-	font-family: "Be Vietnam Pro", sans-serif;
+	font-family: "Poppins", sans-serif;
 	display: block;
 	font-weight: 700;
 	font-size: 2rem;
 	line-height: 1.1;
 	margin-bottom: 1rem;
 }.hero-banner .sub-heading {
-	font-family: "Be Vietnam Pro", sans-serif;
+	font-family: "Inter", sans-serif;
 	display: block;
 	font-size: .875rem;
 	line-height: 1.32142857;
@@ -2714,13 +2719,28 @@ input.btn.has_width {
 	justify-content: center;
 }.hero-banner .slick-dots {
 	bottom: 1.875rem;
+}.hero-banner .hero-banner-item {
+	position: relative;
+}.hero-banner.text-left .banner-text {
+	margin-inline: 0 auto;
+	text-align: left;
+	padding: 0;
+}.hero-banner.text-right .banner-text {
+	margin-inline: auto 0;
+	text-align: right;
+	padding: 0;
+}.about-section {
+	max-width: 1400px;
+	text-align: center;
+	margin-inline: auto;
 }.about-section .about-section__content {
+	color: #4b535d;
 	font-size: 1rem;
 }.about-section .btn-wrap {
 	margin-top: .9375rem;
-	-webkit-box-pack: start;
-	-ms-flex-pack: start;
-	justify-content: flex-start;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 }.service-section .section-title {
 	margin-bottom: 1.25rem;
 }.service-section .service-wrap {
@@ -2733,12 +2753,12 @@ input.btn.has_width {
 	margin-bottom: 1.25rem;
 	height: 2.125rem;
 }.service-section .service-wrap .service-item .service-title {
-	font-weight: 700;
-	color: #172554;
+	font-weight: 500;
+	color: #000;
 	font-size: 1.125rem;
 	margin-bottom: .9375rem;
 }.service-section .service-wrap .service-item .service-content {
-	color: #8f8f8f;
+	color: #4b535d;
 }.service-section .service-wrap .service-item .service-content p:last-child {
 	margin-bottom: 0;
 }.feature-section .section-title {
@@ -2842,7 +2862,7 @@ input.btn.has_width {
 	font-size: 5rem;
 	display: block;
 	color: rgba(23, 37, 84, .2);
-	font-family: "Be Vietnam Pro", sans-serif;
+	font-family: "Poppins", sans-serif;
 	position: absolute;
 	line-height: 0;
 	left: 50%;
@@ -2924,7 +2944,7 @@ input.btn.has_width {
 }.contact-info .contact-info-header .contact-info-subtitle {
 	font-family: "Inter", sans-serif;
 	font-size: 1.125rem;
-	color: #717171;
+	color: #4b535d;
 	margin-bottom: 0;
 }.contact-info .contact-info-wrap ul li {
 	color: #172554;
@@ -3824,6 +3844,8 @@ input.btn.has_width {
 	}.content-section,
 	.header,
 	.grievance-form,
+	.hero-banner.text-left .container,
+	.hero-banner.text-right .container,
 	.about-section,
 	.service-section,
 	.feature-section,
@@ -3871,6 +3893,8 @@ input.btn.has_width {
 		padding: 6px;
 	}body #pojo-a11y-toolbar .pojo-a11y-toolbar-toggle a svg {
 		max-width: 24px;
+	}body {
+		font-size: 16px;
 	}.tag-wrap {
 		gap: 8px;
 	}.tag-wrap.tag-wrap--lg {
@@ -3881,7 +3905,7 @@ input.btn.has_width {
 	}.woocommerce-breadcrumb {
 		font-size: 12px;
 	}.section-title {
-		font-size: 34px;
+		font-size: 26px;
 		margin-bottom: 15px;
 	}.section-header {
 		margin-bottom: 30px;
@@ -3904,6 +3928,7 @@ input.btn.has_width {
 	}button.btn,
 	a.btn,
 	input.btn {
+		border-radius: 10px;
 		padding: 5px 30px;
 		font-size: 16px;
 	}button.btn.btn-sm,
@@ -4032,7 +4057,7 @@ input.btn.has_width {
 		-webkit-column-gap: 40px;
 		column-gap: 40px;
 	}.about-section .about-section__content {
-		font-size: 18px;
+		font-size: 16px;
 	}.about-section .btn-wrap {
 		margin-top: 15px;
 	}.service-section .section-title {
@@ -4571,6 +4596,8 @@ input.btn.has_width {
 	}.content-section,
 	.header,
 	.grievance-form,
+	.hero-banner.text-left .container,
+	.hero-banner.text-right .container,
 	.about-section,
 	.service-section,
 	.feature-section,
@@ -4613,7 +4640,7 @@ input.btn.has_width {
 		padding-top: 2.125rem;
 		font-size: 1.125rem;
 	}.section-title {
-		font-size: 38px;
+		font-size: 30px;
 		margin-bottom: 20px;
 	}.section-header {
 		margin-bottom: 50px;
@@ -4667,7 +4694,6 @@ input.btn.has_width {
 	a.btn,
 	input.btn {
 		padding: 8px 20px;
-		font-size: 16px;
 	}button.btn.btn-lg,
 	a.btn.btn-lg,
 	input.btn.btn-lg {
@@ -4707,7 +4733,7 @@ input.btn.has_width {
 		font-size: 38px;
 		margin-bottom: 18px;
 	}.about-section .about-section__content {
-		font-size: 20px;
+		font-size: 18px;
 	}.about-section .btn-wrap {
 		margin-top: 20px;
 	}.service-section .section-title {
@@ -4883,6 +4909,8 @@ input.btn.has_width {
 	}.content-section,
 	.header,
 	.grievance-form,
+	.hero-banner.text-left .container,
+	.hero-banner.text-right .container,
 	.about-section,
 	.service-section,
 	.feature-section,
@@ -4916,7 +4944,7 @@ input.btn.has_width {
 	.sucess-stories-wrap {
 		margin-bottom: 60px;
 	}.section-title {
-		font-size: 42px;
+		font-size: 34px;
 		margin-bottom: 25px;
 	}.content-section {
 		margin-block: 60px;
@@ -5091,6 +5119,8 @@ input.btn.has_width {
 	}.content-section,
 	.header,
 	.grievance-form,
+	.hero-banner.text-left .container,
+	.hero-banner.text-right .container,
 	.about-section,
 	.service-section,
 	.feature-section,
@@ -5124,7 +5154,7 @@ input.btn.has_width {
 	.sucess-stories-wrap {
 		margin-bottom: 100px;
 	}.section-title {
-		font-size: 48px;
+		font-size: 38px;
 		margin-bottom: 30px;
 	}.content-section {
 		margin-block: 100px;
@@ -5146,7 +5176,7 @@ input.btn.has_width {
 	.repository-level1-wrap,
 	.repository-level2-wrap,
 	.repository-level3-wrap {
-		margin-bottom: 100px;
+		margin-bottom: 80px;
 	}.hero-banner .banner-title {
 		font-size: 48px;
 		margin-bottom: 18px;
@@ -5383,6 +5413,16 @@ input.btn.has_width {
 		padding-inline: .75rem;
 	}.footer .footer-container {
 		gap: 1.875rem;
+	}.footer .footer-container .footer-left {
+		max-width: 100%;
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+	}.footer .footer-container .footer-links {
+		max-width: 50%;
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 50%;
+		flex: 0 0 50%;
 	}
 }@media (max-width: 480px) {
 	.grid-item {
