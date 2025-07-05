@@ -191,12 +191,11 @@ body {
 
   @include media-breakpoint-up(xl) {
     font-size: 34px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
 
   @include media-breakpoint-up(xxl) {
     font-size: 38px;
-    margin-bottom: 30px;
   }
 }
 
@@ -204,25 +203,37 @@ body {
   margin-bottom: rem-calc(20px);
 
   @include media-breakpoint-up(md) {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   @include media-breakpoint-up(lg) {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   .section-title {
-    margin-bottom: 20px;
+    margin-bottom: rem-calc(10px);
+    @include media-breakpoint-up(md) {
+      margin-bottom: 20px;
+    }
   }
 
   .section-subtitle {
     font-family: "Inter", sans-serif;
-    font-size: rem-calc(18px);
+    font-size: rem-calc(16px);
     color: $theme-gray;
     margin-bottom: 0;
 
     @include media-breakpoint-up(md) {
+      font-size: 16px;
+    }
+    @include media-breakpoint-up(xl) {
       font-size: 18px;
+    }
+  }
+  &.section-header--white {
+    .section-title,
+    .section-subtitle {
+      color: $white;
     }
   }
 }

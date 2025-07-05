@@ -88,33 +88,33 @@
 
   .service-banner-title {
     color: inherit;
-    font-weight: 700;
-    font-size: rem-calc(26px);
+    font-weight: 500;
+    font-size: rem-calc(22px);
     line-height: 1.1;
     margin-block: 0 rem-calc(15px);
 
     @include media-breakpoint-up(md) {
-      font-size: 34px;
+      font-size: 26px;
       margin-bottom: 15px;
     }
 
     @include media-breakpoint-up(lg) {
-      font-size: 38px;
+      font-size: 30px;
       margin-bottom: 20px;
     }
 
     @include media-breakpoint-up(xl) {
-      font-size: 42px;
-      margin-bottom: 25px;
+      font-size: 34px;
+      margin-bottom: 30px;
     }
 
     @include media-breakpoint-up(xxl) {
-      font-size: 48px;
+      font-size: 38px;
     }
   }
 
   .service-banner-text {
-    font-size: rem-calc(14px);
+    font-size: rem-calc(16px);
 
     @include media-breakpoint-up(md) {
       font-size: 16px;
@@ -162,14 +162,14 @@
       flex-direction: column;
       text-align: center;
       background: rgba($theme-secondary-color, 0.13);
-      max-width: 100;
-      flex: 0 0 100;
+      max-width: 100%;
+      flex: 0 0 100%;
       padding: rem-calc(20px);
       border-radius: rem-calc(20px);
 
       @include media-breakpoint-up(md) {
-        max-width: calc(50% - 50px);
-        flex: 0 0 calc(50% - 50px);
+        max-width: calc(50% - 20px);
+        flex: 0 0 calc(50% - 20px);
         min-height: 334px;
         padding: 20px;
         border-radius: 50px;
@@ -178,38 +178,17 @@
       .service-feature-title {
         color: $theme-primary-color;
         font-weight: 700;
-        font-size: rem-calc(32px);
         line-height: 1.1;
-        margin-block: 0 rem-calc(15px);
+        margin-block: 0 rem-calc(10px);
+        font-size: rem-calc(18px);
 
         @include media-breakpoint-up(md) {
-          font-size: 34px;
-          margin-bottom: 15px;
+          font-size: 20px;
+          margin-bottom: 10px;
         }
 
         @include media-breakpoint-up(lg) {
-          font-size: 38px;
-          margin-bottom: 20px;
-        }
-
-        @include media-breakpoint-up(xl) {
-          font-size: 42px;
-          margin-bottom: 25px;
-        }
-
-        @include media-breakpoint-up(xxl) {
-          font-size: 48px;
-        }
-      }
-
-      .service-feature-text {
-        @include media-breakpoint-up(md) {
-          margin-inline: auto;
-          max-width: 300px;
-        }
-
-        @include media-breakpoint-up(lg) {
-          max-width: 400px;
+          font-size: 22px;
         }
       }
     }

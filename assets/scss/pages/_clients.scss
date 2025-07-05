@@ -7,7 +7,7 @@
 .logo-wrap {
     row-gap: rem-calc(20px);
     column-gap: rem-calc(20px);
-
+    justify-content: center;
     @include media-breakpoint-up(md) {
         row-gap: 30px;
         column-gap: 30px;
@@ -16,14 +16,6 @@
     @include media-breakpoint-up(lg) {
         column-gap: 40px;
         row-gap: 40px;
-    }
-
-    @include media-breakpoint-up(xl) {
-        column-gap: 60px;
-    }
-
-    @include media-breakpoint-up(xxl) {
-        column-gap: 100px;
     }
 }
 
@@ -44,6 +36,7 @@
     }
 
     @include media-breakpoint-up(lg) {
+        padding: 40px;
         flex: 0 0 calc(25% - 30px);
         max-width: calc(25% - 30px);
     }

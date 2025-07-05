@@ -106,9 +106,9 @@
   .job-description {
       color: #585858;
       font-weight: 400;
-      font-size: rem-calc(12px);
+      font-size: rem-calc(14px);
       @include media-breakpoint-up(md) {
-          font-size: 12px;
+          font-size: 14px;
       }
   }
   
@@ -230,9 +230,9 @@
   .sucess-description {
       color: $theme-primary-color;
       font-weight: 400;
-      font-size: rem-calc(12px);
+      font-size: rem-calc(16px);
       @include media-breakpoint-up(md) {
-          font-size: 12px;
+          font-size: 16px;
       }
   }
 }

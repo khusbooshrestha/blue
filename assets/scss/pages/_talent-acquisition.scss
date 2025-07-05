@@ -1,6 +1,13 @@
 .recruitment-process {
     @extend %section-padding;
     @extend %p-100;
+    .recruitment-process-img {
+        img {
+            @include media-breakpoint-up(lg) {
+                max-width: 900px;
+            }
+        }
+    }
 }
 
 .recruitment-step {

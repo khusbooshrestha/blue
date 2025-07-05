@@ -245,13 +245,18 @@
             flex-basis: calc(50% - 20px);
             margin-bottom: 0;
         }
+        &.w-100 {
+            @include media-breakpoint-up(md) {
+                flex-basis: 100%;
+            }
+        } 
     }
 }
 
 .form-control {
     background: #F6F5F3;
     border: 1px solid#E0DBD7;
-    border-radius: 5px;
+    border-radius: 5px; 
     width: 100%;
 
     @include media-breakpoint-up(md) {
@@ -264,7 +269,8 @@
     
 }
 .form-control-border {
-    border: 1px dotted $black;
+    background: transparent;
+    border: 2px dotted $black;
     border-width: 0 0 1px 0;
     border-radius: 0;
     padding-inline: 0;

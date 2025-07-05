@@ -19,26 +19,65 @@
         }
       }
     );
-
-
-    $(".testimonial-slider").slick({
-      slidesToShow: 3,   // 3 slides on desktop
+    $(".hero-banner-slider").slick({
+      slidesToShow: 1,   // 3 slides on desktop
       slidesToScroll: 1,
-      arrows: false,
+      arrows: true,
       dots: false,
-      centerMode: true,  // No center mode
       variableWidth: false, // Ensure slides are all the same width
       infinite: true,     // Infinite loop effect
       focusOnSelect: true,
       cssEase: "linear",
       touchMove: true,
-      centerPadding: '0',
+    });
+
+    $(".logo-slider").slick({
+      slidesToShow: 6,   // 6 slides on desktop
+      slidesToScroll: 1,
+      arrows: false,
+      infinite: false,
+      dots: true,
+      variableWidth: false, // Ensure slides are all the same width
+      focusOnSelect: true,
+      cssEase: "linear",
+      touchMove: true,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 4,   // 1 slide on mobile
+            slidesToScroll: 1,
+            adaptiveHeight: true,
+          }
+        },
+        {
+          breakpoint: 768,  // For mobile devices (<= 768px)
+          settings: {
+            slidesToShow: 2,   
+            slidesToScroll: 1,
+            adaptiveHeight: true,
+          }
+        }
+      ],
+    });
+
+    $(".testimonial-slider").slick({
+      slidesToShow: 2,   // 3 slides on desktop
+      slidesToScroll: 1,
+      arrows: false,
+      dots: true,
+      arrows: false,
+      variableWidth: false, // Ensure slides are all the same width
+      infinite: true,     // Infinite loop effect
+      focusOnSelect: true,
+      cssEase: "linear",
+      touchMove: true,
       responsive: [
         {
           breakpoint: 992,
           settings: {
             slidesToShow: 2,   // 1 slide on mobile
-            slidesToScroll: 2,
+            slidesToScroll: 1,
             centerMode: false, // Ensure no center mode on mobile
             dots: true,
             adaptiveHeight: true,

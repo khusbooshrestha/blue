@@ -14,7 +14,7 @@
       background: $white;
       left: 0;
       right: 0;
-      bottom: -6px;
+      bottom: -16px;
       height: 40px;
     }
   }
@@ -23,7 +23,7 @@
     margin-top: 0;
 
     @include media-breakpoint-up(lg) {
-      margin-top: -42px;
+      margin-top: -26px;
     }
   }
 }
@@ -76,6 +76,7 @@
 
     @include media-breakpoint-down(sm) {
       padding-top: rem-calc(10px);
+      display: none;
     }
 
     @include media-breakpoint-only(md) {
@@ -195,7 +196,7 @@
       justify-content: center;
       z-index: 1;
       border-radius: 50px;
-      padding: 21px 10px;
+      padding: 15px 10px;
     }
 
     @include media-breakpoint-down(md) {

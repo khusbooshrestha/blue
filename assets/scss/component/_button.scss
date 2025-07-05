@@ -14,17 +14,19 @@ input.btn {
     color: $white;
     padding: rem-calc(6px 7px);
     display: inline-block;
-    border-radius: 0;
     text-transform: capitalize;
-    border-radius: rem-calc(5px);
+    border-radius: rem-calc(25px);
+    min-width: rem-calc(130px);
+
     @include media-breakpoint-up(md) {
-        border-radius: 10px;
+        min-width: 140px;
         padding: 5px 30px;
         font-size: 16px;
     }
 
     @include media-breakpoint-up(lg) {
         padding: 8px 20px;
+        min-width: rem-calc(160px);
     }
 
     &:focus,
@@ -136,11 +138,7 @@ input.btn {
     }
 
     &.btn-round {
-        border-radius: rem-calc(5px);
-
-        @include media-breakpoint-up(md) {
-            border-radius: 10px;
-        }
+        border-radius: rem-calc(25px);
     }
 
     &.btn-outline {
@@ -173,14 +171,14 @@ input.btn {
     }
 
     &.has_width {
-        width: rem-calc(127px);
+        width: rem-calc(130px);
 
         @include media-breakpoint-up(md) {
             width: 140px;
         }
 
         @include media-breakpoint-up(lg) {
-            width: rem-calc(152px);
+            width: rem-calc(160px);
         }
     }
 
